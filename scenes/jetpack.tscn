@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bcvl5ui0fu0wk"]
+
+[node name="Jetpack" type="Node2D"]

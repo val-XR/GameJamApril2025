@@ -1,23 +1,72 @@
-[gd_scene load_steps=5 format=3 uid="uid://bncg5w35j5q15"]
+[gd_scene load_steps=12 format=3 uid="uid://bncg5w35j5q15"]
 
-[ext_resource type="Texture2D" uid="uid://wxcly6g1l7yb" path="res://textures/Player textures/diver_2.png" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://ouxp3mdshv4p" path="res://textures/Player textures/diver_animation_test_03.png" id="1_3vyb7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vyb7"]
 radius = 9.35368
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("1_3vyb7")
 region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(448, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qhqgy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g2els")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
@@ -30,6 +79,8 @@ shape = SubResource("CircleShape2D_3vyb7")
 rotation = 1.5708
 scale = Vector2(0.425717, 0.433803)
 sprite_frames = SubResource("SpriteFrames_qhqgy")
+autoplay = "default"
+frame_progress = 0.76906
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
