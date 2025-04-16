@@ -137,7 +137,7 @@ rotation = 0.0
 scale = Vector2(1, 1.64477)
 
 [node name="resource" parent="." instance=ExtResource("7_wi4c7")]
-position = Vector2(56, -76)
+position = Vector2(-5, 50)
 scale = Vector2(0.379, 0.5)
 
 [node name="Cursor" parent="." instance=ExtResource("8_70vka")]

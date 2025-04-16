@@ -101,7 +101,7 @@ rotation = 1.5708
 scale = Vector2(0.425717, 0.433803)
 sprite_frames = SubResource("SpriteFrames_qhqgy")
 autoplay = "default"
-frame_progress = 0.710829
+frame_progress = 0.503354
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
