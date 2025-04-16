@@ -75,10 +75,10 @@ rotation = -2.18682
 blend_mode = 2
 
 [node name="Submarine" parent="." instance=ExtResource("6_ygxny")]
-offset_left = -72.0
-offset_top = -104.0
-offset_right = -32.0
-offset_bottom = -64.0
+offset_left = 79.0
+offset_top = -72.0
+offset_right = 119.0
+offset_bottom = -32.0
 scale = Vector2(3.56, 3.56)
 flip_h = true
 
