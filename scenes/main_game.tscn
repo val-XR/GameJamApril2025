@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=4 uid="uid://bukrnqashm7fy"]
 
-[ext_resource type="PackedScene" uid="uid://ba2kbek28ewyu" path="res://scenes/player.tscn" id="1_72e8q"]
+[ext_resource type="PackedScene" uid="uid://bncg5w35j5q15" path="res://scenes/player.tscn" id="1_72e8q"]
 [ext_resource type="Texture2D" uid="uid://kvofeuyaeh8g" path="res://textures/TestSpriteSheet (2).png" id="1_s3esy"]
-[ext_resource type="Script" uid="uid://bygck2mcm38io" path="res://scenes/player.gd" id="2_d2op2"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="2_d2op2"]
 [ext_resource type="Texture2D" uid="uid://cv8vhcvdenulg" path="res://textures/light.png" id="4_0rdsr"]
-[ext_resource type="PackedScene" uid="uid://dokmuff5ochpq" path="res://scenes/crystal.tscn" id="5_ipu61"]
-[ext_resource type="PackedScene" uid="uid://qcav4d2kgaoj" path="res://scenes/submarine.tscn" id="6_ygxny"]
+[ext_resource type="PackedScene" uid="uid://dm7yf7amlpmtd" path="res://scenes/crystal.tscn" id="5_ipu61"]
+[ext_resource type="PackedScene" uid="uid://xkstenrakr2w" path="res://scenes/submarine.tscn" id="6_ygxny"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_72e8q"]
 texture = ExtResource("1_s3esy")
@@ -84,6 +84,16 @@ rotation = -2.18682
 [node name="PointLight2D" parent="Crystals/Crystal3" index="0"]
 blend_mode = 2
 
+[node name="Crystal4" parent="Crystals" instance=ExtResource("5_ipu61")]
+offset_left = -48.0
+offset_top = -70.0
+offset_right = -8.0
+offset_bottom = -30.0
+rotation = -2.18682
+
+[node name="PointLight2D" parent="Crystals/Crystal4" index="0"]
+blend_mode = 2
+
 [node name="Submarine" parent="." instance=ExtResource("6_ygxny")]
 offset_left = -48.0
 offset_top = -128.0
@@ -100,4 +110,5 @@ scale = Vector2(1, 1.64477)
 [editable path="Crystals/Crystal"]
 [editable path="Crystals/Crystal2"]
 [editable path="Crystals/Crystal3"]
+[editable path="Crystals/Crystal4"]
 [editable path="Submarine"]
