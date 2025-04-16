@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://civvo6a3hcv0q"
-path="res://.godot/imported/scrap_pipe.png-199b57ef8d30438e8e20b54b846fb6cc.ctex"
+path="res://.godot/imported/scrap_pipe.png-cb0004f790a0a17380569013a4e93fbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/scrap_pipe.png"
-dest_files=["res://.godot/imported/scrap_pipe.png-199b57ef8d30438e8e20b54b846fb6cc.ctex"]
+source_file="res://textures/Resources/scrap_pipe.png"
+dest_files=["res://.godot/imported/scrap_pipe.png-cb0004f790a0a17380569013a4e93fbd.ctex"]
 
 [params]
 

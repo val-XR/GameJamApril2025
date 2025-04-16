@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwoj7ox7jyany"
-path="res://.godot/imported/uranium_ore.png-a133849fae468b57e037a7e655500a74.ctex"
+uid="uid://cg02f2jmb7sta"
+path="res://.godot/imported/RustedSubmarine.png-8bb2d69a1b4e408ad6b66862990b3c0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/uranium_ore.png"
-dest_files=["res://.godot/imported/uranium_ore.png-a133849fae468b57e037a7e655500a74.ctex"]
+source_file="res://textures/Decorations/RustedSubmarine.png"
+dest_files=["res://.godot/imported/RustedSubmarine.png-8bb2d69a1b4e408ad6b66862990b3c0b.ctex"]
 
 [params]
 

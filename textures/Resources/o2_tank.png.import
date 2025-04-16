@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cijp2hlj1dslu"
-path="res://.godot/imported/shipwreck.png-a3bab827ecfa98e01d5998a44c95a1ca.ctex"
+uid="uid://2lvhqjkvb06e"
+path="res://.godot/imported/o2_tank.png-335382156522154e5b82f5df0bb089d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/shipwreck.png"
-dest_files=["res://.godot/imported/shipwreck.png-a3bab827ecfa98e01d5998a44c95a1ca.ctex"]
+source_file="res://textures/Resources/o2_tank.png"
+dest_files=["res://.godot/imported/o2_tank.png-335382156522154e5b82f5df0bb089d6.ctex"]
 
 [params]
 

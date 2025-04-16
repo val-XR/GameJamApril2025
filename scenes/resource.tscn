@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://vn5l0ae3omjt"]
 
-[ext_resource type="Texture2D" uid="uid://uiwm511cr2yf" path="res://textures/Iron_ore.png" id="1_ca17w"]
+[ext_resource type="Texture2D" uid="uid://uiwm511cr2yf" path="res://textures/Resources/Iron_ore.png" id="1_ca17w"]
 
 [node name="resource" type="Node2D"]
 

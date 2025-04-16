@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk42tufj424ig"
-path="res://.godot/imported/submarine.png-34eb398a1c0e1ad9491e6ee08e58a242.ctex"
+uid="uid://cijp2hlj1dslu"
+path="res://.godot/imported/shipwreck.png-6c3406a1cc739cc892b785fcd0a596ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/submarine.png"
-dest_files=["res://.godot/imported/submarine.png-34eb398a1c0e1ad9491e6ee08e58a242.ctex"]
+source_file="res://textures/Decorations/shipwreck.png"
+dest_files=["res://.godot/imported/shipwreck.png-6c3406a1cc739cc892b785fcd0a596ca.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3g2ebb20k4ld"
-path="res://.godot/imported/ScubaDiver.png-c36a95938d4a171b6f851eef36445294.ctex"
+uid="uid://g1ysc1yypb4u"
+path="res://.godot/imported/SunkenNuke.png-9f91b564180c984731401286dfa425ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/ScubaDiver.png"
-dest_files=["res://.godot/imported/ScubaDiver.png-c36a95938d4a171b6f851eef36445294.ctex"]
+source_file="res://textures/Decorations/SunkenNuke.png"
+dest_files=["res://.godot/imported/SunkenNuke.png-9f91b564180c984731401286dfa425ac.ctex"]
 
 [params]
 

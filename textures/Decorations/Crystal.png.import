@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2lvhqjkvb06e"
-path="res://.godot/imported/o2_tank.png-3854d0633368aec4042de1d629eb0706.ctex"
+uid="uid://bakvfopirbful"
+path="res://.godot/imported/Crystal.png-844bd0cb42e1410dd5a6bec1efcbd494.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/o2_tank.png"
-dest_files=["res://.godot/imported/o2_tank.png-3854d0633368aec4042de1d629eb0706.ctex"]
+source_file="res://textures/Decorations/Crystal.png"
+dest_files=["res://.godot/imported/Crystal.png-844bd0cb42e1410dd5a6bec1efcbd494.ctex"]
 
 [params]
 

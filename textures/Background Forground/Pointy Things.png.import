@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uiwm511cr2yf"
-path="res://.godot/imported/Iron_ore.png-73635a64da6af7985673971b646ee2a2.ctex"
+uid="uid://bofhkrb0x46kq"
+path="res://.godot/imported/Pointy Things.png-bdb876131159ae3b70048c990e229d4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Iron_ore.png"
-dest_files=["res://.godot/imported/Iron_ore.png-73635a64da6af7985673971b646ee2a2.ctex"]
+source_file="res://textures/Background Forground/Pointy Things.png"
+dest_files=["res://.godot/imported/Pointy Things.png-bdb876131159ae3b70048c990e229d4a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wxcly6g1l7yb"
-path="res://.godot/imported/diver_2.png-0da66099d8011e4c577b917d9ab10045.ctex"
+uid="uid://tb38vkud7ri4"
+path="res://.godot/imported/gold_ore.png-ff3b473459ba15aac0eb901b253a8efb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/diver_2.png"
-dest_files=["res://.godot/imported/diver_2.png-0da66099d8011e4c577b917d9ab10045.ctex"]
+source_file="res://textures/Resources/gold_ore.png"
+dest_files=["res://.godot/imported/gold_ore.png-ff3b473459ba15aac0eb901b253a8efb.ctex"]
 
 [params]
 

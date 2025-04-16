@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bncg5w35j5q15"]
 
-[ext_resource type="Texture2D" uid="uid://wxcly6g1l7yb" path="res://textures/diver_2.png" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://wxcly6g1l7yb" path="res://textures/Player textures/diver_2.png" id="1_3vyb7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vyb7"]
 radius = 9.35368
@@ -40,4 +40,4 @@ offset_right = 1084.0
 offset_bottom = 160.0
 theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
 theme_override_font_sizes/font_size = 51
-text = "Pirates Of The Depths"
+text = "Pirates Of The Deep"

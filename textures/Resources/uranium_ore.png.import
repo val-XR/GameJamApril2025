@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqi8h5uygloap"
-path="res://.godot/imported/scrap_propeller.png-56d65fb17da554530043227ca39e7ea1.ctex"
+uid="uid://dwoj7ox7jyany"
+path="res://.godot/imported/uranium_ore.png-2db11deeb63fbb126c8bafb77ea26269.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/scrap_propeller.png"
-dest_files=["res://.godot/imported/scrap_propeller.png-56d65fb17da554530043227ca39e7ea1.ctex"]
+source_file="res://textures/Resources/uranium_ore.png"
+dest_files=["res://.godot/imported/uranium_ore.png-2db11deeb63fbb126c8bafb77ea26269.ctex"]
 
 [params]
 
