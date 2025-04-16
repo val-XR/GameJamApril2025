@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://bukrnqashm7fy"]
+[gd_scene load_steps=20 format=4 uid="uid://bukrnqashm7fy"]
 
 [ext_resource type="PackedScene" uid="uid://bncg5w35j5q15" path="res://scenes/player.tscn" id="1_72e8q"]
 [ext_resource type="Texture2D" uid="uid://kvofeuyaeh8g" path="res://textures/Background Forground/TestSpriteSheet (2).png" id="1_s3esy"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://vn5l0ae3omjt" path="res://scenes/resource.tscn" id="7_wi4c7"]
 [ext_resource type="PackedScene" uid="uid://bwpk8qhabhdns" path="res://scenes/cursor.tscn" id="8_70vka"]
 [ext_resource type="Texture2D" uid="uid://b45r221mfsnt1" path="res://textures/Decorations/Main_Submarine.png" id="9_5cypo"]
+[ext_resource type="PackedScene" uid="uid://dtv3n4k5a6g7y" path="res://scenes/seaweed.tscn" id="14_8xp80"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_72e8q"]
 texture = ExtResource("1_s3esy")
@@ -98,9 +99,6 @@ offset_top = 13.0
 offset_right = -45.0
 offset_bottom = 53.0
 
-[node name="PointLight2D" parent="Crystals/Crystal" index="0"]
-blend_mode = 2
-
 [node name="Crystal2" parent="Crystals" instance=ExtResource("5_ipu61")]
 offset_left = 108.0
 offset_top = -145.0
@@ -109,18 +107,12 @@ offset_bottom = -105.0
 rotation = -2.71362
 flip_h = true
 
-[node name="PointLight2D" parent="Crystals/Crystal2" index="0"]
-blend_mode = 2
-
 [node name="Crystal3" parent="Crystals" instance=ExtResource("5_ipu61")]
 offset_left = 360.0
 offset_top = -175.0
 offset_right = 400.0
 offset_bottom = -135.0
 rotation = -2.18682
-
-[node name="PointLight2D" parent="Crystals/Crystal3" index="0"]
-blend_mode = 2
 
 [node name="Submarine" parent="." instance=ExtResource("6_ygxny")]
 modulate = Color(0.362829, 0.362829, 0.362829, 1)
@@ -141,6 +133,16 @@ position = Vector2(-5, 50)
 scale = Vector2(0.379, 0.5)
 
 [node name="Cursor" parent="." instance=ExtResource("8_70vka")]
+
+[node name="Seaweed" parent="." instance=ExtResource("14_8xp80")]
+position = Vector2(166, -7)
+
+[node name="Seaweed2" parent="." instance=ExtResource("14_8xp80")]
+position = Vector2(-18, 57)
+
+[node name="Seaweed3" parent="." instance=ExtResource("14_8xp80")]
+position = Vector2(-158, 9)
+scale = Vector2(1.29199, 3.18835)
 
 [editable path="Crystals/Crystal"]
 [editable path="Crystals/Crystal2"]

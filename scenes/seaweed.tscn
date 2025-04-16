@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dtv3n4k5a6g7y"]
+
+[ext_resource type="Texture2D" uid="uid://dligvso3ydki6" path="res://textures/Decorations/Sea_Grass_Animation.png" id="1_riu74"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spjjx"]
+atlas = ExtResource("1_riu74")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxdpm"]
+atlas = ExtResource("1_riu74")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wd6o"]
+atlas = ExtResource("1_riu74")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny4w6"]
+atlas = ExtResource("1_riu74")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hjsmd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spjjx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxdpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wd6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny4w6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Seaweed" type="Node2D"]
+modulate = Color(0.0118589, 0.580233, 0.858856, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hjsmd")
+autoplay = "default"
+frame_progress = 0.236894

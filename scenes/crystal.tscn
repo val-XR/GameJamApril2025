@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cm7cymqmomja" path="res://textures/Lights/ball_light.png" id="2_gxs1y"]
 
 [node name="Crystal" type="TextureRect"]
-modulate = Color(0.458405, 0.458405, 0.458405, 1)
+light_mask = 2
 z_index = 1
 offset_left = -18.0
 offset_top = -35.0
@@ -15,7 +15,7 @@ texture = ExtResource("1_kxb6e")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(18, 21)
-color = Color(0.901961, 0.329412, 1, 1)
-energy = 4.78
+color = Color(0.605615, 0.000706463, 0.690227, 1)
+energy = 16.0
 texture = ExtResource("2_gxs1y")
 texture_scale = 3.3
