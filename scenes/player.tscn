@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba2kbek28ewyu"]
+
+[ext_resource type="Texture2D" uid="uid://wxcly6g1l7yb" path="res://textures/diver_2.png" id="1_3vyb7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3vyb7"]
+radius = 9.35368
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qhqgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2els")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.46026, 1.46026)
+shape = SubResource("CircleShape2D_3vyb7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.425717, 0.433803)
+sprite_frames = SubResource("SpriteFrames_qhqgy")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="HUD"]
+offset_left = 22.0
+offset_top = 22.0
+offset_right = 1084.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
+theme_override_font_sizes/font_size = 51
+text = "Pirates Of The Depths"

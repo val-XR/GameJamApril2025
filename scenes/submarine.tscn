@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://qcav4d2kgaoj"]
+
+[ext_resource type="Texture2D" uid="uid://bk42tufj424ig" path="res://textures/submarine.png" id="1_k4f85"]
+[ext_resource type="Texture2D" uid="uid://cv8vhcvdenulg" path="res://textures/light.png" id="2_qvldv"]
+
+[node name="Submarine" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(20.005, 20.355)
+texture = ExtResource("1_k4f85")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-11, 22)
+rotation = 3.14159
+texture = ExtResource("2_qvldv")
