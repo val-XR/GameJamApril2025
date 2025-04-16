@@ -1,23 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://vn5l0ae3omjt"]
+[gd_scene load_steps=3 format=3 uid="uid://vn5l0ae3omjt"]
 
 [ext_resource type="Texture2D" uid="uid://uiwm511cr2yf" path="res://textures/Resources/Iron_ore.png" id="1_ca17w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ca17w"]
 
 [node name="resource" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -19.0
+offset_top = -19.0
+offset_right = 21.0
+offset_bottom = 21.0
 pivot_offset = Vector2(19, 19)
 texture = ExtResource("1_ca17w")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 16.0
-offset_top = 14.0
-offset_right = 24.0
-offset_bottom = 22.0
+offset_left = -3.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 3.0
 scale = Vector2(3.56, 3.56)
 pivot_offset = Vector2(4, 4)
 tooltip_text = "Iron Ore"
 theme_override_colors/icon_hover_color = Color(0.67069, 0.67069, 0.67069, 1)
 button_mask = 0
 flat = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -9.53674e-07)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_ca17w")

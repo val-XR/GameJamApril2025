@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bwpk8qhabhdns"]
+[gd_scene load_steps=14 format=3 uid="uid://bwpk8qhabhdns"]
 
 [ext_resource type="Texture2D" uid="uid://ck223e3v5b6to" path="res://textures/Cursor/cursor.png" id="1_1eco6"]
 [ext_resource type="Script" uid="uid://eaxs7hhocib3" path="res://scenes/cursor.gd" id="1_s0nli"]
@@ -68,6 +68,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ndevg"]
+radius = 3.0
+
 [node name="Cursor" type="Node2D"]
 script = ExtResource("1_s0nli")
 
@@ -86,3 +89,33 @@ scale = Vector2(0.407301, 0.407301)
 sprite_frames = SubResource("SpriteFrames_fpr62")
 autoplay = "default"
 frame_progress = 0.251785
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ndevg")
+
+[node name="Label" type="Label" parent="."]
+z_index = 5
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -12.0
+offset_right = 106.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.279999, 0.279999)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.0562671, 0.738191, 0.0470029, 1)
+theme_override_colors/font_shadow_color = Color(0.97, 0.97, 0.97, 0.172549)
+theme_override_constants/shadow_outline_size = 10
+text = "Resource Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
