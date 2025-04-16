@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://g1537spoqicn"]
+
+[ext_resource type="Script" uid="uid://cht2hltq8o3g5" path="res://scenes/mutated_frog_fish.gd" id="1_l38ar"]
+[ext_resource type="Texture2D" uid="uid://ddwjewluijdl2" path="res://textures/Creatures/Mutated_Fish_1.png" id="1_xr161"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jkdiw"]
+radius = 14.0357
+
+[node name="Mutated Frog Fish" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_l38ar")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_xr161")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -15)
+shape = SubResource("CircleShape2D_jkdiw")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
