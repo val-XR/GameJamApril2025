@@ -97,7 +97,21 @@ position = Vector2(50.9025, 19.9744)
 rotation = 0.0
 scale = Vector2(1, 1.64477)
 
+[node name="Submarine2" parent="." instance=ExtResource("6_ygxny")]
+offset_left = 174.0
+offset_top = -71.0
+offset_right = 214.0
+offset_bottom = -31.0
+scale = Vector2(3.56, 3.56)
+flip_h = true
+
+[node name="PointLight2D" parent="Submarine2" index="0"]
+position = Vector2(50.9025, 19.9744)
+rotation = 0.0
+scale = Vector2(1, 1.64477)
+
 [editable path="Crystals/Crystal"]
 [editable path="Crystals/Crystal2"]
 [editable path="Crystals/Crystal3"]
 [editable path="Submarine"]
+[editable path="Submarine2"]
