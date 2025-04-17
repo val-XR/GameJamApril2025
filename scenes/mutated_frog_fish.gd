@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 const speed = 20
+var FishAngry = false
 
 @export var player: Node2D
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
@@ -15,13 +16,23 @@ func _physics_process(delta: float) -> void:
 # Tells the Patherfinder the location of the player
 func makepath() -> void:
 	nav_agent.target_position = player.global_position
+	FishAngry = true
 	if nav_agent.target_position > $Sprite2D.global_position:
 		$Sprite2D.flip_h = true
 	elif nav_agent.target_position < $Sprite2D.global_position:
 		$Sprite2D.flip_h = false
 		
 func fishhome() -> void:
-	nav_agent.target_position = %TestingWaypoint.global_position
+	var waypoints = [$"../Waypoints/Waypoint", $"../Waypoints/Waypoint2", $"../Waypoints/Waypoint3",$"../Waypoints/Waypoint4" ]
+	randomize()
+	var item = waypoints[randi() % waypoints.size()]
+	randi()
+	print(item)
+	nav_agent.target_position = item.global_position
+	if nav_agent.target_position > $Sprite2D.global_position:
+		$Sprite2D.flip_h = true
+	elif nav_agent.target_position < $Sprite2D.global_position:
+		$Sprite2D.flip_h = false
 	
 # Updates Pathfinder
 func _on_timer_timeout() -> void:
@@ -29,4 +40,8 @@ func _on_timer_timeout() -> void:
 	if distance <= 165:
 		makepath()
 	else:
+		FishAngry = false
+		
+func _on_timer_2_timeout() -> void:
+	if FishAngry == false:
 		fishhome()

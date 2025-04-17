@@ -171,12 +171,6 @@ player = NodePath("../Player")
 visible = false
 navigation_polygon = SubResource("NavigationPolygon_sp04v")
 
-[node name="TestingWaypoint" type="PointLight2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(430, 107)
-energy = 16.0
-texture = ExtResource("16_ihbck")
-
 [node name="Cursor" parent="." instance=ExtResource("8_70vka")]
 
 [node name="IronOre" parent="." instance=ExtResource("16_vnsdt")]
@@ -184,6 +178,24 @@ position = Vector2(-44, 45)
 
 [node name="UraniumOre" parent="." instance=ExtResource("17_ikqpi")]
 position = Vector2(12, 61)
+
+[node name="Waypoints" type="Node" parent="."]
+
+[node name="Waypoint" type="PointLight2D" parent="Waypoints"]
+position = Vector2(396, 120)
+texture = ExtResource("16_ihbck")
+
+[node name="Waypoint2" type="PointLight2D" parent="Waypoints"]
+position = Vector2(468, 86)
+texture = ExtResource("16_ihbck")
+
+[node name="Waypoint3" type="PointLight2D" parent="Waypoints"]
+position = Vector2(492, 129)
+texture = ExtResource("16_ihbck")
+
+[node name="Waypoint4" type="PointLight2D" parent="Waypoints"]
+position = Vector2(433, 137)
+texture = ExtResource("16_ihbck")
 
 [editable path="Crystal Group/Crystal"]
 [editable path="Crystal Group/Crystal4"]
