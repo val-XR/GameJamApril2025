@@ -10,12 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://cqy5imrnghhwf" path="res://textures/Background Forground/Background_Textures.png" id="6_nqdth"]
 [ext_resource type="PackedScene" uid="uid://xkstenrakr2w" path="res://scenes/submarine.tscn" id="6_ygxny"]
 [ext_resource type="Texture2D" uid="uid://bofhkrb0x46kq" path="res://textures/Background Forground/Pointy Things.png" id="7_o6v7o"]
-[ext_resource type="PackedScene" uid="uid://vn5l0ae3omjt" path="res://scenes/resource.tscn" id="7_wi4c7"]
 [ext_resource type="PackedScene" uid="uid://bwpk8qhabhdns" path="res://scenes/cursor.tscn" id="8_70vka"]
 [ext_resource type="Texture2D" uid="uid://b45r221mfsnt1" path="res://textures/Decorations/Main_Submarine.png" id="9_5cypo"]
 [ext_resource type="PackedScene" uid="uid://dtv3n4k5a6g7y" path="res://scenes/seaweed.tscn" id="14_8xp80"]
-[ext_resource type="PackedScene" uid="uid://g1537spoqicn" path="res://scenes/mutated_frog_fish.tscn" id="15_sp04v"]
+[ext_resource type="PackedScene" path="res://scenes/mutated_frog_fish.tscn" id="15_sp04v"]
 [ext_resource type="Texture2D" uid="uid://cm7cymqmomja" path="res://textures/Lights/ball_light.png" id="16_ihbck"]
+[ext_resource type="PackedScene" uid="uid://cnu85w3nri8r4" path="res://scenes/ironOre.tscn" id="16_vnsdt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_72e8q"]
 texture = ExtResource("1_s3esy")
@@ -145,10 +145,6 @@ position = Vector2(76.1834, 28.1204)
 rotation = 0.0
 scale = Vector2(1, 1.64477)
 
-[node name="resource" parent="." instance=ExtResource("7_wi4c7")]
-position = Vector2(-5, 50)
-scale = Vector2(0.379, 0.5)
-
 [node name="Cursor" parent="." instance=ExtResource("8_70vka")]
 
 [node name="Seaweed" parent="." instance=ExtResource("14_8xp80")]
@@ -175,6 +171,10 @@ unique_name_in_owner = true
 position = Vector2(430, 107)
 energy = 16.0
 texture = ExtResource("16_ihbck")
+
+[node name="ironOre" parent="." instance=ExtResource("16_vnsdt")]
+position = Vector2(14, 58)
+scale = Vector2(0.719999, 0.719999)
 
 [editable path="Crystals/Crystal"]
 [editable path="Crystals/Crystal4"]

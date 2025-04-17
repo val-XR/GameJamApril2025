@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://bwpk8qhabhdns"]
+[gd_scene load_steps=16 format=3 uid="uid://bwpk8qhabhdns"]
 
 [ext_resource type="Texture2D" uid="uid://ck223e3v5b6to" path="res://textures/Cursor/cursor.png" id="1_1eco6"]
 [ext_resource type="Script" uid="uid://eaxs7hhocib3" path="res://scenes/cursor.gd" id="1_s0nli"]
 [ext_resource type="Texture2D" uid="uid://cs2i0wm7flewo" path="res://textures/Cursor/cursor_animation_02.png" id="3_ndevg"]
+[ext_resource type="Texture2D" uid="uid://dk2j6x332qc0n" path="res://textures/Cursor/cursor_big_yellow.png" id="4_n5qf0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n5qf0"]
 atlas = ExtResource("3_ndevg")
@@ -36,6 +37,10 @@ region = Rect2(192, 0, 32, 32)
 atlas = ExtResource("3_ndevg")
 region = Rect2(224, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpr62"]
+atlas = ExtResource("4_n5qf0")
+region = Rect2(0, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_fpr62"]
 animations = [{
 "frames": [{
@@ -62,60 +67,114 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lk1ck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpr62")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ndevg"]
-radius = 3.0
+radius = 1.0
 
 [node name="Cursor" type="Node2D"]
+light_mask = 16
 script = ExtResource("1_s0nli")
 
-[node name="Ring" type="Sprite2D" parent="."]
+[node name="DefaultRing" type="Sprite2D" parent="."]
 light_mask = 16
 z_index = 5
 scale = Vector2(0.407301, 0.407301)
 texture = ExtResource("1_1eco6")
 offset = Vector2(0.5, 0.5)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
+[node name="AnimatedRing" type="AnimatedSprite2D" parent="."]
 light_mask = 16
 z_index = 5
 scale = Vector2(0.407301, 0.407301)
 sprite_frames = SubResource("SpriteFrames_fpr62")
-autoplay = "default"
-frame_progress = 0.251785
+frame = 8
+frame_progress = 1.0
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_ndevg")
 
-[node name="Label" type="Label" parent="."]
+[node name="ResourceDisplayNameLabel" type="Label" parent="."]
+light_mask = 16
 z_index = 5
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -16.0
-offset_top = -12.0
-offset_right = 106.0
-offset_bottom = 11.0
+offset_left = -19.0
+offset_top = -25.0
+offset_right = 215.0
+offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.279999, 0.279999)
+scale = Vector2(0.159999, 0.159999)
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.0562671, 0.738191, 0.0470029, 1)
-theme_override_colors/font_shadow_color = Color(0.97, 0.97, 0.97, 0.172549)
 theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 24
 text = "Resource Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
+[node name="ResourceValueLabel" type="Label" parent="."]
+light_mask = 16
+z_index = 5
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -21.0
+offset_right = 130.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.279999, 0.279999)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.0562671, 0.738191, 0.0470029, 1)
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 24
+text = "$: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="InstructionLabel" type="Label" parent="."]
+light_mask = 16
+visibility_layer = 16
+z_index = 5
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -13.0
+offset_right = 177.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.159998, 0.159998)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.74, 0.693627, 0.0444, 1)
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 26
+text = "Click"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

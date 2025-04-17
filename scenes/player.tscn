@@ -106,6 +106,7 @@ frame_progress = 0.503354
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="HUD"]
+light_mask = 16
 offset_left = 22.0
 offset_top = 22.0
 offset_right = 1084.0

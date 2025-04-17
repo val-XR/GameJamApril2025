@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnu85w3nri8r4"]
+
+[ext_resource type="Texture2D" uid="uid://uiwm511cr2yf" path="res://textures/Resources/Iron_ore.png" id="1_tu3cp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ca17w"]
+radius = 16.0
+
+[node name="ironOre" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -19.0
+offset_top = -19.0
+offset_right = 21.0
+offset_bottom = 21.0
+pivot_offset = Vector2(19, 19)
+texture = ExtResource("1_tu3cp")
+
+[node name="Button" type="Button" parent="TextureRect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -18.0
+offset_right = 16.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 3.28)
+button_mask = 0
+flat = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -9.53674e-07)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ca17w")
