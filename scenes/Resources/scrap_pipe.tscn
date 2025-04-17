@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://clrm42pxqpmiy"]
+
+[ext_resource type="PackedScene" uid="uid://cnu85w3nri8r4" path="res://scenes/Resources/ResourceBase.tscn" id="1_ad1lu"]
+[ext_resource type="Texture2D" uid="uid://civvo6a3hcv0q" path="res://textures/Resources/scrap_pipe.png" id="2_txhqj"]
+
+[node name="ScrapPipe" instance=ExtResource("1_ad1lu")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_txhqj")

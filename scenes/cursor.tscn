@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ck223e3v5b6to" path="res://textures/Cursor/cursor.png" id="1_1eco6"]
 [ext_resource type="Script" uid="uid://eaxs7hhocib3" path="res://scenes/cursor.gd" id="1_s0nli"]
 [ext_resource type="Texture2D" uid="uid://h3ya55bq0hyx" path="res://textures/Cursor/cursor_animation_white.png" id="3_n5qf0"]
-[ext_resource type="Texture2D" uid="uid://dk2j6x332qc0n" path="res://textures/Cursor/cursor_big_yellow.png" id="4_n5qf0"]
+[ext_resource type="Texture2D" uid="uid://dxrw4mibbis6q" path="res://textures/Cursor/cursor_animation_white_single02.png" id="4_n5qf0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pey64"]
 atlas = ExtResource("3_n5qf0")
@@ -115,6 +115,7 @@ texture = ExtResource("1_1eco6")
 offset = Vector2(0.5, 0.5)
 
 [node name="AnimatedRing" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.454902, 0.87451, 1, 1)
 light_mask = 16
 z_index = 5
 scale = Vector2(0.407301, 0.407301)

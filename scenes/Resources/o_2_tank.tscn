@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt6a2oey5iyjl"]
+
+[ext_resource type="PackedScene" uid="uid://cnu85w3nri8r4" path="res://scenes/Resources/ResourceBase.tscn" id="1_cixlp"]
+[ext_resource type="Texture2D" uid="uid://2lvhqjkvb06e" path="res://textures/Resources/o2_tank.png" id="2_texie"]
+
+[node name="O2Tank" instance=ExtResource("1_cixlp")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_texie")

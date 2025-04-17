@@ -3,18 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://bakvfopirbful" path="res://textures/Decorations/Crystal.png" id="1_kxb6e"]
 [ext_resource type="Texture2D" uid="uid://cm7cymqmomja" path="res://textures/Lights/ball_light.png" id="2_gxs1y"]
 
-[node name="Crystal" type="TextureRect"]
+[node name="Sprite2D" type="Sprite2D"]
 light_mask = 2
-z_index = 1
-offset_left = -18.0
-offset_top = -35.0
-offset_right = 22.0
-offset_bottom = 5.0
-pivot_offset = Vector2(18.025, 35.06)
+scale = Vector2(1.24, 1.24)
 texture = ExtResource("1_kxb6e")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(18, 21)
+position = Vector2(-1.6129, 0.806453)
+scale = Vector2(0.806452, 0.806452)
 color = Color(0.605615, 0.000706463, 0.690227, 1)
 energy = 16.0
 texture = ExtResource("2_gxs1y")

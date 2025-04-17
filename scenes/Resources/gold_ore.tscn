@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmdgmmdeht3pi"]
+
+[ext_resource type="PackedScene" uid="uid://cnu85w3nri8r4" path="res://scenes/Resources/ResourceBase.tscn" id="1_af1w4"]
+[ext_resource type="Texture2D" uid="uid://tb38vkud7ri4" path="res://textures/Resources/gold_ore.png" id="2_srcjg"]
+
+[node name="GoldOre" instance=ExtResource("1_af1w4")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_srcjg")

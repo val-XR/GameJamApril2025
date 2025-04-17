@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bukrnqashm7fy"]
+[gd_scene load_steps=28 format=4 uid="uid://bukrnqashm7fy"]
 
 [ext_resource type="PackedScene" uid="uid://bncg5w35j5q15" path="res://scenes/player.tscn" id="1_72e8q"]
 [ext_resource type="Texture2D" uid="uid://kvofeuyaeh8g" path="res://textures/Background Forground/TestSpriteSheet (2).png" id="1_s3esy"]
@@ -12,10 +12,14 @@
 [ext_resource type="Texture2D" uid="uid://bofhkrb0x46kq" path="res://textures/Background Forground/Pointy Things.png" id="7_o6v7o"]
 [ext_resource type="PackedScene" uid="uid://bwpk8qhabhdns" path="res://scenes/cursor.tscn" id="8_70vka"]
 [ext_resource type="Texture2D" uid="uid://b45r221mfsnt1" path="res://textures/Decorations/Main_Submarine.png" id="9_5cypo"]
+[ext_resource type="PackedScene" uid="uid://cmdgmmdeht3pi" path="res://scenes/Resources/gold_ore.tscn" id="13_ibnub"]
 [ext_resource type="PackedScene" uid="uid://dtv3n4k5a6g7y" path="res://scenes/seaweed.tscn" id="14_8xp80"]
+[ext_resource type="PackedScene" uid="uid://bt6a2oey5iyjl" path="res://scenes/Resources/o_2_tank.tscn" id="15_5wboo"]
 [ext_resource type="PackedScene" uid="uid://g1537spoqicn" path="res://scenes/mutated_frog_fish.tscn" id="15_sp04v"]
+[ext_resource type="PackedScene" uid="uid://clrm42pxqpmiy" path="res://scenes/Resources/scrap_pipe.tscn" id="16_6de02"]
 [ext_resource type="Texture2D" uid="uid://cm7cymqmomja" path="res://textures/Lights/ball_light.png" id="16_ihbck"]
 [ext_resource type="PackedScene" uid="uid://cxb5i04hr7fmq" path="res://scenes/Resources/iron_ore.tscn" id="16_vnsdt"]
+[ext_resource type="PackedScene" uid="uid://xotgeyx82uxr" path="res://scenes/Resources/scrap_propeller.tscn" id="17_cybgu"]
 [ext_resource type="PackedScene" uid="uid://hwmggj664u3g" path="res://scenes/Resources/uranium_ore.tscn" id="17_ikqpi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_72e8q"]
@@ -102,35 +106,23 @@ tile_set = SubResource("TileSet_d2op2")
 [node name="Crystal Group" type="Node" parent="."]
 
 [node name="Crystal" parent="Crystal Group" instance=ExtResource("5_ipu61")]
-offset_left = -85.0
-offset_top = 13.0
-offset_right = -45.0
-offset_bottom = 53.0
+position = Vector2(-70, 32)
 
 [node name="Crystal4" parent="Crystal Group" instance=ExtResource("5_ipu61")]
-offset_left = 218.0
-offset_top = -118.0
-offset_right = 258.0
-offset_bottom = -78.0
-rotation = -0.18001
+position = Vector2(-106, -133)
+rotation = -0.608887
 scale = Vector2(0.872232, 0.819476)
 flip_h = true
 flip_v = true
 
 [node name="Crystal2" parent="Crystal Group" instance=ExtResource("5_ipu61")]
-offset_left = 108.0
-offset_top = -145.0
-offset_right = 148.0
-offset_bottom = -105.0
+position = Vector2(440, 15)
 rotation = -2.71362
 flip_h = true
 
 [node name="Crystal3" parent="Crystal Group" instance=ExtResource("5_ipu61")]
-offset_left = 360.0
-offset_top = -175.0
-offset_right = 400.0
-offset_bottom = -135.0
-rotation = -2.18682
+position = Vector2(371, -133)
+rotation = -2.18366
 
 [node name="Seaweed Group" type="Node" parent="."]
 
@@ -162,6 +154,27 @@ scale = Vector2(1, 1.64477)
 
 [node name="Resources Group" type="Node" parent="."]
 
+[node name="IronOre" parent="Resources Group" instance=ExtResource("16_vnsdt")]
+position = Vector2(1, 61)
+
+[node name="UraniumOre" parent="Resources Group" instance=ExtResource("17_ikqpi")]
+position = Vector2(-181, 29)
+
+[node name="GoldOre" parent="Resources Group" instance=ExtResource("13_ibnub")]
+position = Vector2(103, 14)
+
+[node name="O2Tank" parent="Resources Group" instance=ExtResource("15_5wboo")]
+position = Vector2(228, 27)
+rotation = -0.465975
+
+[node name="ScrapPipe" parent="Resources Group" instance=ExtResource("16_6de02")]
+position = Vector2(311, 59)
+rotation = 1.22801
+
+[node name="ScrapPropeller" parent="Resources Group" instance=ExtResource("17_cybgu")]
+position = Vector2(153, -2.00001)
+rotation = 0.729026
+
 [node name="Mutated Frog Fish" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_sp04v")]
 position = Vector2(443, 121)
 scale = Vector2(0.4, 0.4)
@@ -172,12 +185,6 @@ visible = false
 navigation_polygon = SubResource("NavigationPolygon_sp04v")
 
 [node name="Cursor" parent="." instance=ExtResource("8_70vka")]
-
-[node name="IronOre" parent="." instance=ExtResource("16_vnsdt")]
-position = Vector2(-44, 45)
-
-[node name="UraniumOre" parent="." instance=ExtResource("17_ikqpi")]
-position = Vector2(12, 61)
 
 [node name="Waypoints" type="Node" parent="."]
 

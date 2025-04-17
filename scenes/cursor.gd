@@ -63,6 +63,9 @@ var resources = {
 	 "IronOre":     {"display_name": "Iron Ore", "value": "50"},
 	 "UraniumOre":   {"display_name": "Uranium Ore", "value": "250"},
 	 "GoldOre":      {"display_name": "Gold Ore", "value": "90"},
+	 "O2Tank":      {"display_name": "O2 Tank", "value": "40"},
+	 "ScrapPipe":      {"display_name": "Pipe Scrap", "value": "35"},
+	 "ScrapPropeller":      {"display_name": "Propeller Scrap", "value": "40"},
 	}
 
 
