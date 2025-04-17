@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bukrnqashm7fy"]
+[gd_scene load_steps=23 format=4 uid="uid://bukrnqashm7fy"]
 
 [ext_resource type="PackedScene" uid="uid://bncg5w35j5q15" path="res://scenes/player.tscn" id="1_72e8q"]
 [ext_resource type="Texture2D" uid="uid://kvofeuyaeh8g" path="res://textures/Background Forground/TestSpriteSheet (2).png" id="1_s3esy"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://b45r221mfsnt1" path="res://textures/Decorations/Main_Submarine.png" id="9_5cypo"]
 [ext_resource type="PackedScene" uid="uid://dtv3n4k5a6g7y" path="res://scenes/seaweed.tscn" id="14_8xp80"]
 [ext_resource type="PackedScene" uid="uid://g1537spoqicn" path="res://scenes/mutated_frog_fish.tscn" id="15_sp04v"]
+[ext_resource type="Texture2D" uid="uid://cm7cymqmomja" path="res://textures/Lights/ball_light.png" id="16_ihbck"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_72e8q"]
 texture = ExtResource("1_s3esy")
@@ -158,6 +159,12 @@ player = NodePath("../Player")
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 visible = false
 navigation_polygon = SubResource("NavigationPolygon_sp04v")
+
+[node name="TestingWaypoint" type="PointLight2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(430, 107)
+energy = 16.0
+texture = ExtResource("16_ihbck")
 
 [editable path="Crystals/Crystal"]
 [editable path="Crystals/Crystal2"]

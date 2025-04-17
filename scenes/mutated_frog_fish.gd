@@ -19,6 +19,9 @@ func makepath() -> void:
 		$Sprite2D.flip_h = true
 	elif nav_agent.target_position < $Sprite2D.global_position:
 		$Sprite2D.flip_h = false
+		
+func fishhome() -> void:
+	nav_agent.target_position = %TestingWaypoint.global_position
 	
 # Updates Pathfinder
 func _on_timer_timeout() -> void:
@@ -26,4 +29,4 @@ func _on_timer_timeout() -> void:
 	if distance <= 165:
 		makepath()
 	else:
-		pass
+		fishhome()
