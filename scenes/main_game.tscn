@@ -151,7 +151,8 @@ position = Vector2(-158, 9)
 scale = Vector2(1.29199, 3.18835)
 
 [node name="Mutated Frog Fish" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_sp04v")]
-position = Vector2(240, -59)
+position = Vector2(443, 121)
+scale = Vector2(0.4, 0.4)
 player = NodePath("../Player")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]

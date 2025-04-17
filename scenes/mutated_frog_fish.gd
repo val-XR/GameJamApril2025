@@ -5,14 +5,25 @@ const speed = 20
 @export var player: Node2D
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 
+
 # Pathfinder
 func _physics_process(delta: float) -> void:
 	var direction = to_local(nav_agent.get_next_path_position()).normalized()
 	velocity = direction * speed
 	move_and_slide()
 
+# Tells the Patherfinder the location of the player
 func makepath() -> void:
 	nav_agent.target_position = player.global_position
-
+	if nav_agent.target_position > $Sprite2D.global_position:
+		$Sprite2D.flip_h = true
+	elif nav_agent.target_position < $Sprite2D.global_position:
+		$Sprite2D.flip_h = false
+	
+# Updates Pathfinder
 func _on_timer_timeout() -> void:
-	makepath()
+	var distance = global_position.distance_to(player.global_position)
+	if distance <= 165:
+		makepath()
+	else:
+		pass
