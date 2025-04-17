@@ -159,7 +159,7 @@ scale = Vector2(1, 1.64477)
 position = Vector2(1, 61)
 
 [node name="UraniumOre" parent="Resources Group" instance=ExtResource("17_ikqpi")]
-position = Vector2(-181, 29)
+position = Vector2(-131, 45)
 
 [node name="GoldOre" parent="Resources Group" instance=ExtResource("13_ibnub")]
 position = Vector2(103, 14)
