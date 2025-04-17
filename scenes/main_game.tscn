@@ -106,7 +106,8 @@ tile_set = SubResource("TileSet_d2op2")
 [node name="Crystal Group" type="Node" parent="."]
 
 [node name="Crystal" parent="Crystal Group" instance=ExtResource("5_ipu61")]
-position = Vector2(-70, 32)
+position = Vector2(338, -124)
+rotation = -3.62541
 
 [node name="Crystal4" parent="Crystal Group" instance=ExtResource("5_ipu61")]
 position = Vector2(-106, -133)
