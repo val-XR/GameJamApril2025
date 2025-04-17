@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://hwmggj664u3g"]
+
+[ext_resource type="PackedScene" uid="uid://cnu85w3nri8r4" path="res://scenes/Resources/ResourceBase.tscn" id="1_nx3v5"]
+[ext_resource type="Texture2D" uid="uid://dwoj7ox7jyany" path="res://textures/Resources/uranium_ore.png" id="2_u11ey"]
+
+[node name="UraniumOre" instance=ExtResource("1_nx3v5")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_u11ey")

@@ -60,9 +60,9 @@ func _process(delta):
 
 # resources dictionary. Referenced for resource scanner
 var resources = {
-	 "ironOre":     {"display_name": "Iron Ore", "value": "50"},
-	 "villain":   {"display_name": "uranium", "value": "500"},
-	 "Boss":      {"display_name": "100", "value": "500"},
+	 "IronOre":     {"display_name": "Iron Ore", "value": "50"},
+	 "UraniumOre":   {"display_name": "Uranium Ore", "value": "250"},
+	 "GoldOre":      {"display_name": "Gold Ore", "value": "90"},
 	}
 
 
