@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://bwpk8qhabhdns"]
+[gd_scene load_steps=22 format=3 uid="uid://bwpk8qhabhdns"]
 
 [ext_resource type="Texture2D" uid="uid://ck223e3v5b6to" path="res://textures/Cursor/cursor.png" id="1_1eco6"]
 [ext_resource type="Script" uid="uid://eaxs7hhocib3" path="res://scenes/cursor.gd" id="1_s0nli"]
 [ext_resource type="Texture2D" uid="uid://h3ya55bq0hyx" path="res://textures/Cursor/cursor_animation_white.png" id="3_n5qf0"]
 [ext_resource type="Texture2D" uid="uid://dxrw4mibbis6q" path="res://textures/Cursor/cursor_animation_white_single02.png" id="4_n5qf0"]
+[ext_resource type="Texture2D" uid="uid://bpge5f0y0qe0o" path="res://textures/Cursor/holo_ui_02.png" id="5_pey64"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pey64"]
 atlas = ExtResource("3_n5qf0")
@@ -103,6 +104,42 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ndevg"]
 radius = 1.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2fek"]
+atlas = ExtResource("5_pey64")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4aas"]
+atlas = ExtResource("5_pey64")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nr0v"]
+atlas = ExtResource("5_pey64")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyh0g"]
+atlas = ExtResource("5_pey64")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6d3dw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2fek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4aas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nr0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyh0g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
 [node name="Cursor" type="Node2D"]
 light_mask = 16
 script = ExtResource("1_s0nli")
@@ -160,9 +197,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -21.0
+offset_left = -22.0
 offset_top = -21.0
-offset_right = 130.0
+offset_right = 129.0
 offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -171,7 +208,7 @@ size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.0562671, 0.738191, 0.0470029, 1)
 theme_override_constants/shadow_outline_size = 10
 theme_override_font_sizes/font_size = 24
-text = "$: 0"
+text = "$50"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -200,6 +237,15 @@ text = "Click"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="Animated HoloUI" type="AnimatedSprite2D" parent="."]
+light_mask = 16
+z_index = 4
+position = Vector2(-1, -14.0632)
+scale = Vector2(0.6875, 0.498025)
+sprite_frames = SubResource("SpriteFrames_6d3dw")
+autoplay = "default"
+frame_progress = 0.895605
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

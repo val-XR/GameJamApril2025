@@ -7,6 +7,9 @@ var key: String = "" # resources disctionary key (needed to be high in scope)
 # set ring icon vars
 @onready var defaultRing: Sprite2D = $DefaultRing
 @onready var animatedRing: AnimatedSprite2D = $AnimatedRing
+@onready var animatedHoloUI: AnimatedSprite2D = $"Animated HoloUI"
+
+
 
 # set resource scanner label vars
 @onready var instructionLabel: Label = $InstructionLabel
@@ -29,6 +32,7 @@ func setToDefaultRing():
 	# Set ring icon
 	defaultRing.visible = true
 	animatedRing.visible = false
+	animatedHoloUI.visible = false
 	
 	# Hide resource labels
 	resourceDisplayNameLabel.visible = false
@@ -41,6 +45,7 @@ func setToResourceScannerRing():
 	# Set ring icon
 	defaultRing.visible = false
 	animatedRing.visible = true
+	animatedHoloUI.visible = true
 	
 	# Enable resource labels
 	resourceDisplayNameLabel.visible = true
