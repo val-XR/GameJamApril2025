@@ -1,4 +1,5 @@
-extends Node2D
+extends RigidBody2D
+
 
 # Whether this resource should follow the player
 @export var followPlayer: bool = false
@@ -7,7 +8,7 @@ extends Node2D
 @export var player: Node2D
 
 # How quickly the resource moves toward the player
-@export var follow_speed: float = 70.0
+@export var follow_speed: float = 150.0
 
 @export var minimum_distance: float = 30
 
@@ -25,7 +26,6 @@ func _physics_process(delta: float) -> void:
 			var direction = (player.global_position - global_position).normalized()
 			# Move this node toward the player at the given speed
 			global_position += direction * follow_speed * delta
-
 
 
 func _on_button_button_down() -> void:

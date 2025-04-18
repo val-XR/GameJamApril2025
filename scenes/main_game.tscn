@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://bukrnqashm7fy"]
+[gd_scene load_steps=31 format=4 uid="uid://bukrnqashm7fy"]
 
 [ext_resource type="PackedScene" uid="uid://bncg5w35j5q15" path="res://scenes/player.tscn" id="1_72e8q"]
 [ext_resource type="Texture2D" uid="uid://kvofeuyaeh8g" path="res://textures/Background Forground/TestSpriteSheet (2).png" id="1_s3esy"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b45r221mfsnt1" path="res://textures/Decorations/Main_Submarine.png" id="9_5cypo"]
 [ext_resource type="Texture2D" uid="uid://c7wldfc0hel6n" path="res://textures/Background Forground/SlantedForegroundTextures.png" id="9_5wboo"]
 [ext_resource type="PackedScene" uid="uid://cmdgmmdeht3pi" path="res://scenes/Resources/gold_ore.tscn" id="13_ibnub"]
+[ext_resource type="PackedScene" uid="uid://bqimqeettvef3" path="res://scenes/ResourcesV2/ironore_2.tscn" id="14_6de02"]
 [ext_resource type="PackedScene" uid="uid://dtv3n4k5a6g7y" path="res://scenes/seaweed.tscn" id="14_8xp80"]
 [ext_resource type="PackedScene" uid="uid://bt6a2oey5iyjl" path="res://scenes/Resources/o_2_tank.tscn" id="15_5wboo"]
 [ext_resource type="PackedScene" uid="uid://g1537spoqicn" path="res://scenes/mutated_frog_fish.tscn" id="15_sp04v"]
@@ -170,56 +171,58 @@ scale = Vector2(1, 1.64477)
 
 [node name="Resources Group" type="Node" parent="."]
 
-[node name="UraniumOre" parent="Resources Group" node_paths=PackedStringArray("player", "line_node", "object_a", "object_b") instance=ExtResource("17_ikqpi")]
-position = Vector2(-131, 45)
-followPlayer = false
-player = NodePath("../../Player")
-line_node = NodePath("../Line2D Uranium Ore")
-object_a = NodePath("../../Player")
-object_b = NodePath(".")
-
-[node name="GoldOre" parent="Resources Group" node_paths=PackedStringArray("player", "line_node", "object_a", "object_b") instance=ExtResource("13_ibnub")]
-position = Vector2(103, 14)
-followPlayer = false
-player = NodePath("../../Player")
-line_node = NodePath("../Line2D Gold Ore")
-object_a = NodePath("../../Player")
-object_b = NodePath(".")
-
-[node name="O2Tank" parent="Resources Group" node_paths=PackedStringArray("player", "line_node", "object_a", "object_b") instance=ExtResource("15_5wboo")]
-position = Vector2(228, 27)
-rotation = -0.465975
-followPlayer = false
-player = NodePath("../../Player")
-line_node = NodePath("../Line2D O2 Tank")
-object_a = NodePath("../../Player")
-object_b = NodePath(".")
-
-[node name="ScrapPipe" parent="Resources Group" node_paths=PackedStringArray("player", "line_node", "object_a", "object_b") instance=ExtResource("16_6de02")]
-position = Vector2(311, 59)
-rotation = 1.22801
-followPlayer = false
-player = NodePath("../../Player")
-line_node = NodePath("../Line2D Scrap Pipe")
-object_a = NodePath("../../Player")
-object_b = NodePath(".")
-
-[node name="ScrapPropeller" parent="Resources Group" node_paths=PackedStringArray("player", "line_node", "object_a", "object_b") instance=ExtResource("17_cybgu")]
-position = Vector2(153, -2.00001)
-rotation = 0.729026
-followPlayer = false
-player = NodePath("../../Player")
-line_node = NodePath("../Line2D Scrap Propeller")
-object_a = NodePath("../../Player")
-object_b = NodePath(".")
-
-[node name="IronOre" parent="Resources Group" node_paths=PackedStringArray("player", "line_node", "object_a", "object_b") instance=ExtResource("16_vnsdt")]
-position = Vector2(1, 61)
-followPlayer = false
+[node name="IronOre2" parent="Resources Group" node_paths=PackedStringArray("player", "line_node", "object_a", "object_b") instance=ExtResource("14_6de02")]
+position = Vector2(-67, 44)
+mass = 0.5
 player = NodePath("../../Player")
 line_node = NodePath("../Line2D IronOre")
 object_a = NodePath("../../Player")
 object_b = NodePath(".")
+
+[node name="UraniumOre" parent="Resources Group" instance=ExtResource("17_ikqpi")]
+visible = false
+position = Vector2(-131, 45)
+collision_layer = 1
+mass = 1.0
+linear_damp = 5.0
+
+[node name="GoldOre" parent="Resources Group" instance=ExtResource("13_ibnub")]
+visible = false
+position = Vector2(103, 14)
+collision_layer = 1
+mass = 1.0
+linear_damp = 5.0
+
+[node name="O2Tank" parent="Resources Group" instance=ExtResource("15_5wboo")]
+visible = false
+position = Vector2(228, 27)
+rotation = -0.465975
+collision_layer = 1
+mass = 1.0
+linear_damp = 5.0
+
+[node name="ScrapPipe" parent="Resources Group" instance=ExtResource("16_6de02")]
+visible = false
+position = Vector2(311, 59)
+rotation = 1.22801
+collision_layer = 1
+mass = 1.0
+linear_damp = 5.0
+
+[node name="ScrapPropeller" parent="Resources Group" instance=ExtResource("17_cybgu")]
+visible = false
+position = Vector2(153, -2.00001)
+rotation = 0.729026
+collision_layer = 1
+mass = 1.0
+linear_damp = 5.0
+
+[node name="IronOre" parent="Resources Group" instance=ExtResource("16_vnsdt")]
+visible = false
+position = Vector2(1, 61)
+collision_layer = 1
+mass = 1.0
+linear_damp = 5.0
 
 [node name="Line2D Uranium Ore" type="Line2D" parent="Resources Group"]
 z_index = -1

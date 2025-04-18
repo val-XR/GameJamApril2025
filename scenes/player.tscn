@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bktijts6kjhh2" path="res://textures/Player textures/bub.png" id="1_g2els"]
 [ext_resource type="Script" uid="uid://bnvgb2ergkmpd" path="res://scenes/timer.gd" id="3_qhqgy"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3vyb7"]
-radius = 9.35368
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
+radius = 3.17395
+height = 13.791
 
 [sub_resource type="Curve" id="Curve_qhqgy"]
 _data = [Vector2(0, 0), 0.0, -0.440075, 0, 0, Vector2(0.0851064, 0.191011), 0.146692, 0.146692, 0, 0, Vector2(0.519149, 0.191011), -0.309838, -0.309838, 0, 0, Vector2(0.753191, 0), -0.32332, 0.0, 0, 0]
@@ -78,8 +79,10 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(1.46026, 1.46026)
-shape = SubResource("CircleShape2D_3vyb7")
+position = Vector2(1, 0)
+rotation = 1.57079
+scale = Vector2(1.26026, 1.74026)
+shape = SubResource("CapsuleShape2D_qhqgy")
 
 [node name="Bubble Emitter" type="CPUParticles2D" parent="."]
 position = Vector2(7, -3)

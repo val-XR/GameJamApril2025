@@ -1,14 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnu85w3nri8r4"]
+[gd_scene load_steps=5 format=3 uid="uid://cnu85w3nri8r4"]
 
 [ext_resource type="Texture2D" uid="uid://uiwm511cr2yf" path="res://textures/Resources/Iron_ore.png" id="1_4mp8r"]
 [ext_resource type="Script" uid="uid://cqt3o70lp37de" path="res://scenes/Resources/resource_base.gd" id="1_jsmj4"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_jsmj4"]
+radius = 5.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ca17w"]
 radius = 16.0
 
-[node name="ResourceBase" type="Node2D"]
+[node name="RigidBody2D" type="RigidBody2D"]
+collision_layer = 2
+mass = 0.4
+gravity_scale = 0.0
+linear_damp = 1.0
 script = ExtResource("1_jsmj4")
-followPlayer = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jsmj4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.52, 0.52)
@@ -37,5 +46,3 @@ scale = Vector2(0.52, 0.52)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_ca17w")
-
-[connection signal="button_down" from="Sprite2D/Button" to="." method="_on_button_button_down"]

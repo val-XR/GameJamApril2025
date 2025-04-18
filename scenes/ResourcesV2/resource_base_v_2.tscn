@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3romg68jrsp7"]
+
+[ext_resource type="Script" uid="uid://ck8tprfntkvns" path="res://scenes/ResourcesV2/resource_base_v_2.gd" id="1_tjxyt"]
+[ext_resource type="Texture2D" uid="uid://tb38vkud7ri4" path="res://textures/Resources/gold_ore.png" id="1_wv2fx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tjxyt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fh5gf"]
+radius = 3.0
+
+[node name="ResourceBaseV2" type="RigidBody2D"]
+collision_layer = 3
+mass = 100.0
+gravity_scale = 0.0
+script = ExtResource("1_tjxyt")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+flat = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.48718, 0.48718)
+shape = SubResource("CircleShape2D_tjxyt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.500942, 0.500942)
+texture = ExtResource("1_wv2fx")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(2.02992, 2.02992)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_fh5gf")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
