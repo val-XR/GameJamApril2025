@@ -7,8 +7,11 @@ func _ready() -> void:
 	$OxygenTimer.NoAir.connect(No_Air)
 
 func No_Air():
-	health -= 1
-	print("Health:", health)
+	if health <= 0:
+		pass
+	else:
+		health -= 1
+		print("Health:", health)
 
 
 
