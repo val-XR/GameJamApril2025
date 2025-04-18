@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bncg5w35j5q15"]
+[gd_scene load_steps=15 format=3 uid="uid://bncg5w35j5q15"]
 
 [ext_resource type="Texture2D" uid="uid://ouxp3mdshv4p" path="res://textures/Player textures/diver_animation_test_03.png" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://bktijts6kjhh2" path="res://textures/Player textures/bub.png" id="1_g2els"]
+[ext_resource type="Script" uid="uid://bnvgb2ergkmpd" path="res://scenes/timer.gd" id="3_qhqgy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vyb7"]
 radius = 9.35368
@@ -114,3 +115,13 @@ offset_bottom = 160.0
 theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
 theme_override_font_sizes/font_size = 51
 text = "Pirates Of The Deep"
+
+[node name="OxygenTimer" type="Timer" parent="."]
+autostart = true
+script = ExtResource("3_qhqgy")
+
+[node name="OldPos" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="timeout" from="OxygenTimer" to="OxygenTimer" method="_on_timeout"]
+[connection signal="timeout" from="OldPos" to="OxygenTimer" method="_on_old_pos_timeout"]
