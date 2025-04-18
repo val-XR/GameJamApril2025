@@ -170,9 +170,12 @@ scale = Vector2(1, 1.64477)
 
 [node name="Resources Group" type="Node" parent="."]
 
-[node name="IronOre" parent="Resources Group" instance=ExtResource("16_vnsdt")]
+[node name="IronOre" parent="Resources Group" node_paths=PackedStringArray("player") instance=ExtResource("16_vnsdt")]
 position = Vector2(1, 61)
-script = null
+followPlayer = false
+player = NodePath("../../Player")
+follow_speed = 70.0
+minimum_distance = 30.0
 
 [node name="UraniumOre" parent="Resources Group" instance=ExtResource("17_ikqpi")]
 position = Vector2(-131, 45)

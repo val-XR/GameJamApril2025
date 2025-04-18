@@ -8,6 +8,7 @@ radius = 16.0
 
 [node name="ResourceBase" type="Node2D"]
 script = ExtResource("1_jsmj4")
+followPlayer = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.52, 0.52)

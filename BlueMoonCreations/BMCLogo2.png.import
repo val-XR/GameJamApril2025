@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dx0ywom18bpga"
-path="res://.godot/imported/Blue Moon Logo No Background.png-5629aead6df6c480a8c8681c30e11995.ctex"
+path="res://.godot/imported/BMCLogo2.png-0887fd8f5f3b063567984282ff910a5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BlueMoonCreations/Blue Moon Logo No Background.png"
-dest_files=["res://.godot/imported/Blue Moon Logo No Background.png-5629aead6df6c480a8c8681c30e11995.ctex"]
+source_file="res://BlueMoonCreations/BMCLogo2.png"
+dest_files=["res://.godot/imported/BMCLogo2.png-0887fd8f5f3b063567984282ff910a5b.ctex"]
 
 [params]
 

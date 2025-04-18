@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0pk85suwobcg"]
+
+[ext_resource type="Texture2D" uid="uid://ciivsggsl0civ" path="res://BlueMoonCreations/BMCLogo.png" id="1_7u4fa"]
+[ext_resource type="Texture2D" uid="uid://dx0ywom18bpga" path="res://BlueMoonCreations/BMCLogo2.png" id="2_ua82i"]
+
+[node name="BmcLogo" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0834286, 0.0834286)
+texture = ExtResource("1_7u4fa")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, 246)
+scale = Vector2(0.0645714, 0.0645714)
+texture = ExtResource("2_ua82i")
