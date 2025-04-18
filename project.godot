@@ -13,6 +13,8 @@ config_version=5
 config/name="Pirates of The Depths"
 run/main_scene="res://scenes/main_game.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/bg_color=Color(0.0352941, 0.0901961, 0.196078, 1)
+boot_splash/image="uid://ciivsggsl0civ"
 config/icon="res://icon.svg"
 
 [rendering]

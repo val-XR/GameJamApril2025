@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bukrnqashm7fy"]
+[gd_scene load_steps=30 format=4 uid="uid://bukrnqashm7fy"]
 
 [ext_resource type="PackedScene" uid="uid://bncg5w35j5q15" path="res://scenes/player.tscn" id="1_72e8q"]
 [ext_resource type="Texture2D" uid="uid://kvofeuyaeh8g" path="res://textures/Background Forground/TestSpriteSheet (2).png" id="1_s3esy"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bofhkrb0x46kq" path="res://textures/Background Forground/Pointy Things.png" id="7_o6v7o"]
 [ext_resource type="PackedScene" uid="uid://bwpk8qhabhdns" path="res://scenes/cursor.tscn" id="8_70vka"]
 [ext_resource type="Texture2D" uid="uid://b45r221mfsnt1" path="res://textures/Decorations/Main_Submarine.png" id="9_5cypo"]
+[ext_resource type="Texture2D" uid="uid://c7wldfc0hel6n" path="res://textures/Background Forground/SlantedForegroundTextures.png" id="9_5wboo"]
 [ext_resource type="PackedScene" uid="uid://cmdgmmdeht3pi" path="res://scenes/Resources/gold_ore.tscn" id="13_ibnub"]
 [ext_resource type="PackedScene" uid="uid://dtv3n4k5a6g7y" path="res://scenes/seaweed.tscn" id="14_8xp80"]
 [ext_resource type="PackedScene" uid="uid://bt6a2oey5iyjl" path="res://scenes/Resources/o_2_tank.tscn" id="15_5wboo"]
@@ -55,12 +56,24 @@ texture = ExtResource("7_o6v7o")
 0:1/0 = 0
 1:1/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6de02"]
+texture = ExtResource("9_5wboo")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, 8, -8, 8, 8, -8, 8)
+
 [sub_resource type="TileSet" id="TileSet_d2op2"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_72e8q")
 sources/1 = SubResource("TileSetAtlasSource_nqdth")
 sources/2 = SubResource("TileSetAtlasSource_5cypo")
 sources/3 = SubResource("TileSetAtlasSource_wjob3")
+sources/4 = SubResource("TileSetAtlasSource_6de02")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_sp04v"]
 vertices = PackedVector2Array(626.711, 225.672, -259.883, 198.297, -254.109, -302.039, 612.258, -305.953)
