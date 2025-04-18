@@ -7,9 +7,9 @@ extends Node2D
 @export var player: Node2D
 
 # How quickly the resource moves toward the player
-@export var follow_speed: float = 30.0
+@export var follow_speed: float = 70.0
 
-@export var minimum_distance: float = 50
+@export var minimum_distance: float = 30
 
 # Called every physics frame (used for movement/physics updates)
 func _physics_process(delta: float) -> void:
@@ -25,3 +25,21 @@ func _physics_process(delta: float) -> void:
 			var direction = (player.global_position - global_position).normalized()
 			# Move this node toward the player at the given speed
 			global_position += direction * follow_speed * delta
+
+
+
+func _on_button_button_down() -> void:
+	followPlayer = !followPlayer
+	line_node.clear_points()
+
+
+@export var line_node: Node2D
+@export var object_a: Node2D
+@export var object_b: Node2D
+@export var offset = Vector2(0, -60)
+
+func _process(delta):
+	if object_a and object_b and followPlayer:
+		line_node.clear_points()
+		line_node.add_point((object_a.global_position) + offset)
+		line_node.add_point((object_b.global_position) + offset)

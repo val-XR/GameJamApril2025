@@ -170,35 +170,92 @@ scale = Vector2(1, 1.64477)
 
 [node name="Resources Group" type="Node" parent="."]
 
-[node name="IronOre" parent="Resources Group" node_paths=PackedStringArray("player") instance=ExtResource("16_vnsdt")]
+[node name="UraniumOre" parent="Resources Group" node_paths=PackedStringArray("player", "line_node", "object_a", "object_b") instance=ExtResource("17_ikqpi")]
+position = Vector2(-131, 45)
+followPlayer = false
+player = NodePath("../../Player")
+line_node = NodePath("../Line2D Uranium Ore")
+object_a = NodePath("../../Player")
+object_b = NodePath(".")
+
+[node name="GoldOre" parent="Resources Group" node_paths=PackedStringArray("player", "line_node", "object_a", "object_b") instance=ExtResource("13_ibnub")]
+position = Vector2(103, 14)
+followPlayer = false
+player = NodePath("../../Player")
+line_node = NodePath("../Line2D Gold Ore")
+object_a = NodePath("../../Player")
+object_b = NodePath(".")
+
+[node name="O2Tank" parent="Resources Group" node_paths=PackedStringArray("player", "line_node", "object_a", "object_b") instance=ExtResource("15_5wboo")]
+position = Vector2(228, 27)
+rotation = -0.465975
+followPlayer = false
+player = NodePath("../../Player")
+line_node = NodePath("../Line2D O2 Tank")
+object_a = NodePath("../../Player")
+object_b = NodePath(".")
+
+[node name="ScrapPipe" parent="Resources Group" node_paths=PackedStringArray("player", "line_node", "object_a", "object_b") instance=ExtResource("16_6de02")]
+position = Vector2(311, 59)
+rotation = 1.22801
+followPlayer = false
+player = NodePath("../../Player")
+line_node = NodePath("../Line2D Scrap Pipe")
+object_a = NodePath("../../Player")
+object_b = NodePath(".")
+
+[node name="ScrapPropeller" parent="Resources Group" node_paths=PackedStringArray("player", "line_node", "object_a", "object_b") instance=ExtResource("17_cybgu")]
+position = Vector2(153, -2.00001)
+rotation = 0.729026
+followPlayer = false
+player = NodePath("../../Player")
+line_node = NodePath("../Line2D Scrap Propeller")
+object_a = NodePath("../../Player")
+object_b = NodePath(".")
+
+[node name="IronOre" parent="Resources Group" node_paths=PackedStringArray("player", "line_node", "object_a", "object_b") instance=ExtResource("16_vnsdt")]
 position = Vector2(1, 61)
 followPlayer = false
 player = NodePath("../../Player")
-follow_speed = 70.0
-minimum_distance = 30.0
+line_node = NodePath("../Line2D IronOre")
+object_a = NodePath("../../Player")
+object_b = NodePath(".")
 
-[node name="UraniumOre" parent="Resources Group" instance=ExtResource("17_ikqpi")]
-position = Vector2(-131, 45)
-script = null
+[node name="Line2D Uranium Ore" type="Line2D" parent="Resources Group"]
+z_index = -1
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
 
-[node name="GoldOre" parent="Resources Group" instance=ExtResource("13_ibnub")]
-position = Vector2(103, 14)
-script = null
+[node name="Line2D Gold Ore" type="Line2D" parent="Resources Group"]
+z_index = -1
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
 
-[node name="O2Tank" parent="Resources Group" instance=ExtResource("15_5wboo")]
-position = Vector2(228, 27)
-rotation = -0.465975
-script = null
+[node name="Line2D O2 Tank" type="Line2D" parent="Resources Group"]
+z_index = -1
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
 
-[node name="ScrapPipe" parent="Resources Group" instance=ExtResource("16_6de02")]
-position = Vector2(311, 59)
-rotation = 1.22801
-script = null
+[node name="Line2D Scrap Pipe" type="Line2D" parent="Resources Group"]
+z_index = -1
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
 
-[node name="ScrapPropeller" parent="Resources Group" instance=ExtResource("17_cybgu")]
-position = Vector2(153, -2.00001)
-rotation = 0.729026
-script = null
+[node name="Line2D Scrap Propeller" type="Line2D" parent="Resources Group"]
+z_index = -1
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="Line2D IronOre" type="Line2D" parent="Resources Group"]
+z_index = -1
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
 
 [node name="Mutated Frog Fish" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_sp04v")]
 position = Vector2(443, 121)
