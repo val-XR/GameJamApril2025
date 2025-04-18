@@ -122,6 +122,7 @@ script = ExtResource("3_qhqgy")
 
 [node name="OldPos" type="Timer" parent="."]
 wait_time = 0.1
+autostart = true
 
 [connection signal="timeout" from="OxygenTimer" to="OxygenTimer" method="_on_timeout"]
 [connection signal="timeout" from="OldPos" to="OxygenTimer" method="_on_old_pos_timeout"]
