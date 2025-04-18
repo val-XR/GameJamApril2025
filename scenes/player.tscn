@@ -124,5 +124,6 @@ script = ExtResource("3_qhqgy")
 wait_time = 0.1
 autostart = true
 
+[connection signal="NoAir" from="OxygenTimer" to="OxygenTimer" method="_on_no_air"]
 [connection signal="timeout" from="OxygenTimer" to="OxygenTimer" method="_on_timeout"]
 [connection signal="timeout" from="OldPos" to="OxygenTimer" method="_on_old_pos_timeout"]

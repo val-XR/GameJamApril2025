@@ -1,11 +1,14 @@
 extends CharacterBody2D
 
 var is_dragging := false
-
-
+var health = 100
 
 func _ready() -> void:
-	pass
+	$OxygenTimer.NoAir.connect(No_Air)
+
+func No_Air():
+	health -= 1
+	print("Health:", health)
 
 
 
