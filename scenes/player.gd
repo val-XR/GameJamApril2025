@@ -4,6 +4,11 @@ var is_dragging := false
 
 
 
+func _ready() -> void:
+	pass
+
+
+
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
@@ -41,5 +46,3 @@ func _process(delta: float) -> void:
 		rotation = lerp_angle(rotation, target_angle, delta * 9)  # Smooth turn
 
 		move_and_slide()
-	
-		

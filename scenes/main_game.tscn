@@ -70,6 +70,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-264, -312, -270, 208, 
 [node name="MainGame" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_72e8q")]
+unique_name_in_owner = true
 position = Vector2(-38, -54)
 script = ExtResource("2_d2op2")
 
@@ -157,24 +158,30 @@ scale = Vector2(1, 1.64477)
 
 [node name="IronOre" parent="Resources Group" instance=ExtResource("16_vnsdt")]
 position = Vector2(1, 61)
+script = null
 
 [node name="UraniumOre" parent="Resources Group" instance=ExtResource("17_ikqpi")]
 position = Vector2(-131, 45)
+script = null
 
 [node name="GoldOre" parent="Resources Group" instance=ExtResource("13_ibnub")]
 position = Vector2(103, 14)
+script = null
 
 [node name="O2Tank" parent="Resources Group" instance=ExtResource("15_5wboo")]
 position = Vector2(228, 27)
 rotation = -0.465975
+script = null
 
 [node name="ScrapPipe" parent="Resources Group" instance=ExtResource("16_6de02")]
 position = Vector2(311, 59)
 rotation = 1.22801
+script = null
 
 [node name="ScrapPropeller" parent="Resources Group" instance=ExtResource("17_cybgu")]
 position = Vector2(153, -2.00001)
 rotation = 0.729026
+script = null
 
 [node name="Mutated Frog Fish" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_sp04v")]
 position = Vector2(443, 121)
