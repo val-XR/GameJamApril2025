@@ -4,5 +4,5 @@
 
 [node name="SunkenNuke" type="Sprite2D"]
 modulate = Color(0.529067, 0.529067, 0.529067, 1)
-z_index = -2
+z_index = -3
 texture = ExtResource("1_vf8mf")

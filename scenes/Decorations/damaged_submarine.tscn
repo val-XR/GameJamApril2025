@@ -4,5 +4,5 @@
 
 [node name="Damaged Submarine" type="Sprite2D"]
 modulate = Color(0.466181, 0.466181, 0.466181, 1)
-z_index = -2
+z_index = -3
 texture = ExtResource("1_2vtty")
