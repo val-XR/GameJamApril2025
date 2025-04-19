@@ -3,20 +3,11 @@
 [ext_resource type="Theme" uid="uid://bj6c6uajd8ida" path="res://MainMenuTheme.tres" id="1_3e31c"]
 [ext_resource type="Script" uid="uid://1u6wqbmhoi7p" path="res://Menus/MainMenu/main_menu.gd" id="1_qq57v"]
 
-[node name="MainMenu" type="CanvasLayer"]
+[node name="MenuSample" type="CanvasLayer"]
 script = ExtResource("1_qq57v")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="ColorRect" type="ColorRect" parent="."]
 z_as_relative = false
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -24,68 +15,92 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.47451)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
-z_index = 2
-layout_mode = 1
-anchors_preset = 14
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 153.0
-offset_top = -324.0
-offset_right = -153.0
-offset_bottom = 256.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 30
+scale = Vector2(0.618131, 0.618131)
 
-[node name="Label" type="Label" parent="Control/VBoxContainer"]
-layout_mode = 2
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -674.615
+offset_top = -465.921
+offset_right = 675.385
+offset_bottom = -374.921
+grow_horizontal = 2
+size_flags_vertical = 3
 theme = ExtResource("1_3e31c")
 theme_type_variation = &"HeaderLarge"
 text = "Pirates of The Deep"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+z_index = 2
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -675.0
+offset_right = 675.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 55
+
 [node name="Play" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 3
 theme = ExtResource("1_3e31c")
-text = "Play"
-icon_alignment = 1
+text = "Play
+"
 
 [node name="Levels" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 3
 theme = ExtResource("1_3e31c")
 text = "Levels"
 
 [node name="Settings" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 3
 theme = ExtResource("1_3e31c")
 text = "Settings"
 
 [node name="Credits" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 3
 theme = ExtResource("1_3e31c")
 text = "Credits"
 
 [node name="Blue Moon Creations" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 3
 theme = ExtResource("1_3e31c")
 text = "Blue Moon creations"
 
 [node name="Quit" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 3
 theme = ExtResource("1_3e31c")
 text = "Quit
 "
 
 [connection signal="pressed" from="Control/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Levels" to="." method="_on_levels_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Blue Moon Creations" to="." method="_on_blue_moon_creations_pressed"]

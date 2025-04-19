@@ -1,0 +1,193 @@
+[gd_scene load_steps=4 format=3 uid="uid://gwwk3rjfds72"]
+
+[ext_resource type="Script" uid="uid://kgskc2evj2n4" path="res://Menus/LevelsMenu/levels_menu.gd" id="1_d1cbm"]
+[ext_resource type="Theme" uid="uid://bj6c6uajd8ida" path="res://MainMenuTheme.tres" id="1_yerww"]
+[ext_resource type="Texture2D" uid="uid://b1pot3h5bdirq" path="res://icon.svg" id="2_d1cbm"]
+
+[node name="MenuSample" type="CanvasLayer"]
+script = ExtResource("1_d1cbm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.47451)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.618131, 0.618131)
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -674.615
+offset_top = -465.921
+offset_right = 675.385
+offset_bottom = -374.921
+grow_horizontal = 2
+size_flags_vertical = 3
+theme = ExtResource("1_yerww")
+theme_type_variation = &"HeaderLarge"
+text = "Levels"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+z_index = 2
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -674.614
+offset_top = -234.578
+offset_right = 675.386
+offset_bottom = -199.578
+grow_horizontal = 2
+theme_override_constants/separation = 55
+
+[node name="Back" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme = ExtResource("1_yerww")
+text = "Back
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -427.0
+offset_top = -44.0
+offset_right = 813.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.68, 0.68)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Level 1" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme = ExtResource("1_yerww")
+text = "Level 1"
+
+[node name="Spacing" type="TextureRect" parent="HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+texture = ExtResource("2_d1cbm")
+
+[node name="Level 2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme = ExtResource("1_yerww")
+text = "Level 2"
+
+[node name="Spacing2" type="TextureRect" parent="HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+texture = ExtResource("2_d1cbm")
+
+[node name="Level 3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme = ExtResource("1_yerww")
+text = "Level 3"
+
+[node name="Spacing3" type="TextureRect" parent="HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+texture = ExtResource("2_d1cbm")
+
+[node name="Level 4" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme = ExtResource("1_yerww")
+text = "Level 4"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -427.0
+offset_top = 119.0
+offset_right = 813.0
+offset_bottom = 247.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.68, 0.68)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Level 1" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme = ExtResource("1_yerww")
+text = "Level 5"
+
+[node name="Spacing" type="TextureRect" parent="HBoxContainer2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+texture = ExtResource("2_d1cbm")
+
+[node name="Level 2" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme = ExtResource("1_yerww")
+text = "Level 6"
+
+[node name="Spacing2" type="TextureRect" parent="HBoxContainer2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+texture = ExtResource("2_d1cbm")
+
+[node name="Level 3" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme = ExtResource("1_yerww")
+text = "Level 7"
+
+[node name="Spacing3" type="TextureRect" parent="HBoxContainer2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+texture = ExtResource("2_d1cbm")
+
+[node name="Level 4" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme = ExtResource("1_yerww")
+text = "Level 8"
+
+[connection signal="pressed" from="Control/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="HBoxContainer/Level 1" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Level 2" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Level 3" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Level 4" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer2/Level 1" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer2/Level 2" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer2/Level 3" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer2/Level 4" to="." method="_on_play_pressed"]

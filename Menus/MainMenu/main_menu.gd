@@ -12,23 +12,27 @@ func _process(delta: float) -> void:
 
 
 func _on_play_pressed() -> void:
-	pass # Replace with function body.
 	get_tree().change_scene_to_file("res://scenes/main_game.tscn")
 
 
 
+func _on_levels_pressed() -> void:
+	get_tree().change_scene_to_file("res://Menus/LevelsMenu/LevelsMenu.tscn")
+
+
 func _on_settings_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Menus/SettingsMenu/SettingsMenu.tscn")
 	
 
 
 func _on_credits_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Menus/CreditsMenu/CreditsMenu.tscn")
 
 
 
 func _on_blue_moon_creations_pressed() -> void:
-	pass # Replace with function body.
+	OS.shell_open("https://www.bluemooncreates.com")
+
 	
 	
 
