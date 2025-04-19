@@ -63,20 +63,12 @@ func _process(delta):
 
 
 
-# resources dictionary. Referenced for resource scanner
-var resources = {
-	 "IronOre2":     {"display_name": "Iron Ore", "value": "50"},
-	 "UraniumOre":   {"display_name": "Uranium Ore", "value": "250"},
-	 "GoldOre":      {"display_name": "Gold Ore", "value": "90"},
-	 "O2Tank":      {"display_name": "O2 Tank", "value": "40"},
-	 "ScrapPipe":      {"display_name": "Pipe Scrap", "value": "35"},
-	 "ScrapPropeller":      {"display_name": "Propeller Scrap", "value": "40"},
-	}
-
-
 
 # Area2D detected another Area2D. Checks for the name of the scene and checks the dictionary
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	
+	# resources dictionary. Referenced for resource scanner. Gets the dictionary is resources_dictionary.gd through a function
+	var resources = ResourcesDictionary.dictionary()
 	
 	setToResourceScannerRing()
 	

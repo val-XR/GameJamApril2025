@@ -129,7 +129,7 @@ tile_set = SubResource("TileSet_d2op2")
 
 [node name="IronOre2" parent="Resources Group/Iron Ore" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("14_6de02")]
 z_as_relative = true
-position = Vector2(-71, 45)
+position = Vector2(-71, 40)
 collision_layer = 3
 mass = 0.5
 player = NodePath("../../../Player")
@@ -162,11 +162,10 @@ default_color = Color(0.494063, 0.300161, 0.0989949, 1)
 position = Vector2(-1, 61)
 player = NodePath("../../../Player")
 line_node = NodePath("../Uranium Line")
-offset = Vector2(-50, -82)
 
 [node name="Uranium Line" type="Line2D" parent="Resources Group/Uranium"]
 z_index = -2
-position = Vector2(50, 83)
+position = Vector2(-13, 91)
 width = 1.0
 default_color = Color(0.494063, 0.300161, 0.0989949, 1)
 
@@ -246,6 +245,9 @@ position = Vector2(-18, 57)
 position = Vector2(-158, 9)
 scale = Vector2(1.29199, 3.18835)
 
+[node name="Glowing Plants on Rock" parent="." instance=ExtResource("18_on6n6")]
+position = Vector2(476, 144)
+
 [node name="Misc Decoration Group" type="Node" parent="."]
 
 [node name="Submarine" parent="Misc Decoration Group" instance=ExtResource("6_ygxny")]
@@ -272,9 +274,6 @@ position = Vector2(412, 134)
 [node name="Damaged Submarine" parent="Misc Decoration Group" instance=ExtResource("23_x3ega")]
 position = Vector2(-85, 41)
 scale = Vector2(2.00229, 2.00229)
-
-[node name="Glowing Plants on Rock" parent="Misc Decoration Group" instance=ExtResource("18_on6n6")]
-position = Vector2(470, 145)
 
 [node name="Mutated Frog Fish" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_sp04v")]
 position = Vector2(443, 121)

@@ -4,13 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://tb38vkud7ri4" path="res://textures/Resources/gold_ore.png" id="1_wv2fx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tjxyt"]
-radius = 10.2631
+radius = 5.77205
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fh5gf"]
-radius = 3.0
+radius = 3.44841
 
 [node name="ResourceBaseV2" type="RigidBody2D"]
-z_index = -1
 z_as_relative = false
 collision_layer = 2
 mass = 15.0

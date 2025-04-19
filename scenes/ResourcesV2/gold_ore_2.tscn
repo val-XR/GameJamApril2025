@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b81igmtep3fvf"]
+
+[ext_resource type="PackedScene" uid="uid://d3romg68jrsp7" path="res://scenes/ResourcesV2/resource_base_v_2.tscn" id="1_6rjml"]
+
+[node name="GoldOre2" instance=ExtResource("1_6rjml")]
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -0.413175)
+scale = Vector2(0.48718, 0.36718)

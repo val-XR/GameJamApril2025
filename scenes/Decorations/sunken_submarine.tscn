@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://eqhkssx3d5ow"]
+
+[ext_resource type="Texture2D" uid="uid://c7jhuoi4ojty4" path="res://textures/Decorations/SunkenSubmarine.png" id="1_xcghx"]
+
+[node name="Sunken Submarine" type="Sprite2D"]
+modulate = Color(0.473976, 0.473976, 0.473976, 1)
+z_index = -2
+z_as_relative = false
+texture = ExtResource("1_xcghx")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://bukrnqashm7fy"]
+[gd_scene load_steps=33 format=4 uid="uid://bukrnqashm7fy"]
 
 [ext_resource type="PackedScene" uid="uid://bncg5w35j5q15" path="res://scenes/player.tscn" id="1_72e8q"]
 [ext_resource type="Texture2D" uid="uid://kvofeuyaeh8g" path="res://textures/Background Forground/TestSpriteSheet (2).png" id="1_s3esy"]
@@ -20,7 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://cm7cymqmomja" path="res://textures/Lights/ball_light.png" id="16_ihbck"]
 [ext_resource type="PackedScene" uid="uid://b2fjyk55jjwpr" path="res://scenes/ResourcesV2/o_2_tank_2.tscn" id="17_6de02"]
 [ext_resource type="PackedScene" uid="uid://pvvremwvnred" path="res://scenes/ResourcesV2/scrap_pipe_2.tscn" id="18_cybgu"]
-[ext_resource type="PackedScene" uid="uid://c2w85nflato1c" path="res://scenes/Decorations/glowing_plants_on_rock.tscn" id="18_on6n6"]
 [ext_resource type="PackedScene" uid="uid://baaob8f0rueso" path="res://scenes/ResourcesV2/scrap_propeller_2.tscn" id="19_wdxbp"]
 [ext_resource type="PackedScene" uid="uid://do6ve8mlcsidm" path="res://scenes/Decorations/airvent.tscn" id="20_cybgu"]
 [ext_resource type="PackedScene" uid="uid://eqhkssx3d5ow" path="res://scenes/Decorations/sunken_submarine.tscn" id="21_wdxbp"]
@@ -129,7 +128,7 @@ tile_set = SubResource("TileSet_d2op2")
 
 [node name="IronOre2" parent="Resources Group/Iron Ore" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("14_6de02")]
 z_as_relative = true
-position = Vector2(-71, 45)
+position = Vector2(-71, 40)
 collision_layer = 3
 mass = 0.5
 player = NodePath("../../../Player")
@@ -162,7 +161,6 @@ default_color = Color(0.494063, 0.300161, 0.0989949, 1)
 position = Vector2(-1, 61)
 player = NodePath("../../../Player")
 line_node = NodePath("../Uranium Line")
-offset = Vector2(-50, -82)
 
 [node name="Uranium Line" type="Line2D" parent="Resources Group/Uranium"]
 z_index = -2
@@ -272,9 +270,6 @@ position = Vector2(412, 134)
 [node name="Damaged Submarine" parent="Misc Decoration Group" instance=ExtResource("23_x3ega")]
 position = Vector2(-85, 41)
 scale = Vector2(2.00229, 2.00229)
-
-[node name="Glowing Plants on Rock" parent="Misc Decoration Group" instance=ExtResource("18_on6n6")]
-position = Vector2(470, 145)
 
 [node name="Mutated Frog Fish" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_sp04v")]
 position = Vector2(443, 121)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqakmfgxd21dp"]
+
+[ext_resource type="Texture2D" uid="uid://g1ysc1yypb4u" path="res://textures/Decorations/SunkenNuke.png" id="1_vf8mf"]
+
+[node name="SunkenNuke" type="Sprite2D"]
+modulate = Color(0.529067, 0.529067, 0.529067, 1)
+z_index = -2
+texture = ExtResource("1_vf8mf")

@@ -6,9 +6,8 @@
 [node name="Ironore2" instance=ExtResource("1_jjbym")]
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(0, -0.294084)
-scale = Vector2(-0.562649, 0.393127)
+position = Vector2(0.129397, -0.585226)
+scale = Vector2(-0.975621, 0.663809)
 
 [node name="Sprite2D" parent="." index="2"]
-z_index = -1
 texture = ExtResource("2_uwnjb")

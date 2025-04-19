@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2w85nflato1c"]
+
+[ext_resource type="Texture2D" uid="uid://biq5xpxnd7n6v" path="res://textures/Decorations/Glowing_Plants_On_Rock.png" id="1_ogtn4"]
+[ext_resource type="Texture2D" uid="uid://cm7cymqmomja" path="res://textures/Lights/ball_light.png" id="2_3pwv7"]
+
+[node name="Glowing Plants on Rock" type="Sprite2D"]
+z_index = -2
+texture = ExtResource("1_ogtn4")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, 4)
+scale = Vector2(1.67868, 1.67868)
+color = Color(0.0745098, 0.682353, 1, 1)
+energy = 5.5
+texture = ExtResource("2_3pwv7")

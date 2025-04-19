@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://baaob8f0rueso"]
+
+[ext_resource type="PackedScene" uid="uid://d3romg68jrsp7" path="res://scenes/ResourcesV2/resource_base_v_2.tscn" id="1_wttcs"]
+[ext_resource type="Texture2D" uid="uid://cqi8h5uygloap" path="res://textures/Resources/scrap_propeller.png" id="2_r3hmb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wttcs"]
+radius = 2.42627
+height = 19.8396
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r3hmb"]
+radius = 3.85087
+
+[node name="ScrapPropeller2" instance=ExtResource("1_wttcs")]
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-0.0905821, 0.151346)
+rotation = 0.822721
+scale = Vector2(0.786218, 0.786218)
+shape = SubResource("CapsuleShape2D_wttcs")
+
+[node name="Sprite2D" parent="." index="2"]
+texture = ExtResource("2_r3hmb")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-0.0667957, 0.0634849)
+rotation = 0.810806
+shape = SubResource("CircleShape2D_r3hmb")

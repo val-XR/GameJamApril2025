@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://pvvremwvnred"]
+
+[ext_resource type="PackedScene" uid="uid://d3romg68jrsp7" path="res://scenes/ResourcesV2/resource_base_v_2.tscn" id="1_1kxxd"]
+[ext_resource type="Texture2D" uid="uid://civvo6a3hcv0q" path="res://textures/Resources/scrap_pipe.png" id="2_uwf76"]
+
+[node name="ScrapPipe2" instance=ExtResource("1_1kxxd")]
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(1, 0)
+
+[node name="Sprite2D" parent="." index="2"]
+texture = ExtResource("2_uwf76")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0.49263, 5.96046e-08)

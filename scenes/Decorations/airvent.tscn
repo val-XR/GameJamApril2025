@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://do6ve8mlcsidm"]
+
+[ext_resource type="Texture2D" uid="uid://cxaf1sktrd780" path="res://textures/Decorations/Airvent.png" id="1_5axq1"]
+[ext_resource type="Texture2D" uid="uid://bktijts6kjhh2" path="res://textures/Player textures/bub.png" id="2_tay73"]
+
+[sub_resource type="Curve" id="Curve_5prs7"]
+_data = [Vector2(0, 0), 0.0, -0.440075, 0, 0, Vector2(0.0851064, 0.191011), 0.146692, 0.146692, 0, 0, Vector2(0.519149, 0.191011), -0.309838, -0.309838, 0, 0, Vector2(0.753191, 0), -0.32332, 0.0, 0, 0]
+point_count = 4
+
+[node name="Airvent" type="Sprite2D"]
+z_index = -2
+texture = ExtResource("1_5axq1")
+
+[node name="Bubble Emitter" type="CPUParticles2D" parent="."]
+position = Vector2(0.567354, 4)
+rotation = 1.57079
+amount = 7
+texture = ExtResource("2_tay73")
+lifetime = 0.75
+speed_scale = 0.5
+use_fixed_seed = true
+seed = 3266918640
+direction = Vector2(-1, 0)
+spread = 5.04
+gravity = Vector2(0, -192.965)
+initial_velocity_min = 70.31
+initial_velocity_max = 70.31
+linear_accel_max = 68.75
+scale_amount_curve = SubResource("Curve_5prs7")

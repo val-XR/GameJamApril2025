@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6k2povxfx5u5"]
+
+[ext_resource type="PackedScene" uid="uid://d3romg68jrsp7" path="res://scenes/ResourcesV2/resource_base_v_2.tscn" id="1_be1yx"]
+[ext_resource type="Texture2D" uid="uid://dwoj7ox7jyany" path="res://textures/Resources/uranium_ore.png" id="2_7u4g8"]
+
+[node name="UraniumOre2" instance=ExtResource("1_be1yx")]
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0.486088)
+scale = Vector2(0.48718, 0.40718)
+
+[node name="Sprite2D" parent="." index="2"]
+texture = ExtResource("2_7u4g8")
