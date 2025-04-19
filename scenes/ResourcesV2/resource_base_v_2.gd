@@ -21,13 +21,19 @@ extends RigidBody2D
 # Called every physics frame
 func _physics_process(delta: float) -> void:
 	if followPlayer and player:
-		var distance_to_player = global_position.distance_to(player.global_position)
-		
-		if distance_to_player > minimum_distance:
-			var direction = (player.global_position - global_position).normalized()
-			var force = direction * follow_strength
-			apply_central_force(force)
+		var to_player = player.global_position - global_position
+		var distance = to_player.length()
 
+		if distance > minimum_distance:
+			var direction = to_player.normalized()
+
+			# Scale force down as you get closer to the player
+			var strength = clamp((distance - minimum_distance), 0, 300)
+			var force = direction * strength
+			apply_central_force(force)
+			
+	if followPlayer == false:  # only slide if not being pulled
+		apply_central_force(Vector2(0, 5))  # small downward tug
 
 
 

@@ -4,14 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://tb38vkud7ri4" path="res://textures/Resources/gold_ore.png" id="1_wv2fx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tjxyt"]
+radius = 10.2631
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fh5gf"]
 radius = 3.0
 
 [node name="ResourceBaseV2" type="RigidBody2D"]
-collision_layer = 3
-mass = 100.0
+z_index = -1
+z_as_relative = false
+collision_layer = 2
+mass = 15.0
 gravity_scale = 0.0
+linear_damp = 1.0
 script = ExtResource("1_tjxyt")
 
 [node name="Button" type="Button" parent="."]
@@ -36,6 +40,7 @@ scale = Vector2(0.48718, 0.48718)
 shape = SubResource("CircleShape2D_tjxyt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
 scale = Vector2(0.500942, 0.500942)
 texture = ExtResource("1_wv2fx")
 
