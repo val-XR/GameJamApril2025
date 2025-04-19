@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://gsu2jrox1id6"]
+
+[ext_resource type="Texture2D" uid="uid://cl46nxumf4qq2" path="res://textures/Decorations/Ceiling Sea Grass.png" id="1_2r57v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ixdj"]
+atlas = ExtResource("1_2r57v")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1atx8"]
+atlas = ExtResource("1_2r57v")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ddby"]
+atlas = ExtResource("1_2r57v")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pn1b4"]
+atlas = ExtResource("1_2r57v")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lvdto"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ixdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1atx8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ddby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pn1b4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ddby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1atx8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Ceiling Seaweed" type="AnimatedSprite2D"]
+modulate = Color(0.572988, 0.572988, 0.572988, 1)
+sprite_frames = SubResource("SpriteFrames_lvdto")
+autoplay = "default"
+frame_progress = 0.351597

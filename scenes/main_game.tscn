@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://bukrnqashm7fy"]
+[gd_scene load_steps=35 format=4 uid="uid://bukrnqashm7fy"]
 
 [ext_resource type="PackedScene" uid="uid://bncg5w35j5q15" path="res://scenes/player.tscn" id="1_72e8q"]
 [ext_resource type="Texture2D" uid="uid://kvofeuyaeh8g" path="res://textures/Background Forground/TestSpriteSheet (2).png" id="1_s3esy"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://eqhkssx3d5ow" path="res://scenes/Decorations/sunken_submarine.tscn" id="21_wdxbp"]
 [ext_resource type="PackedScene" uid="uid://cqakmfgxd21dp" path="res://scenes/Decorations/sunken_nuke.tscn" id="22_wdxbp"]
 [ext_resource type="PackedScene" uid="uid://bqtky6bqdvdny" path="res://scenes/Decorations/damaged_submarine.tscn" id="23_x3ega"]
+[ext_resource type="PackedScene" uid="uid://gsu2jrox1id6" path="res://scenes/Decorations/ceiling_seaweed.tscn" id="24_x3ega"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_72e8q"]
 texture = ExtResource("1_s3esy")
@@ -275,6 +276,13 @@ scale = Vector2(2.00229, 2.00229)
 
 [node name="Glowing Plants on Rock" parent="Misc Decoration Group" instance=ExtResource("18_on6n6")]
 position = Vector2(470, 145)
+
+[node name="Ceiling Seaweed" parent="Misc Decoration Group" instance=ExtResource("24_x3ega")]
+position = Vector2(270, -105)
+
+[node name="Ceiling Seaweed2" parent="Misc Decoration Group" instance=ExtResource("24_x3ega")]
+position = Vector2(-68, -155)
+flip_h = true
 
 [node name="Mutated Frog Fish" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_sp04v")]
 position = Vector2(443, 121)
