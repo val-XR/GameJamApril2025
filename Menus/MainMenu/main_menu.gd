@@ -35,6 +35,5 @@ func _on_blue_moon_creations_pressed() -> void:
 
 	
 	
-
 func _on_quit_pressed() -> void:
 	get_tree().quit()

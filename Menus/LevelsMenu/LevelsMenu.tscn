@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://gwwk3rjfds72"]
 
 [ext_resource type="Script" uid="uid://kgskc2evj2n4" path="res://Menus/LevelsMenu/levels_menu.gd" id="1_d1cbm"]
-[ext_resource type="Theme" uid="uid://bj6c6uajd8ida" path="res://MainMenuTheme.tres" id="1_yerww"]
+[ext_resource type="Theme" uid="uid://bj6c6uajd8ida" path="res://Menus/MainMenuTheme.tres" id="1_yerww"]
 [ext_resource type="Texture2D" uid="uid://b1pot3h5bdirq" path="res://icon.svg" id="2_d1cbm"]
 
 [node name="MenuSample" type="CanvasLayer"]

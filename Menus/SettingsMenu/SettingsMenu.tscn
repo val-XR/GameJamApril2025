@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8u0wtgfur3ed"]
+[gd_scene load_steps=4 format=3 uid="uid://b8u0wtgfur3ed"]
 
 [ext_resource type="Script" uid="uid://tqtt376upsu7" path="res://Menus/SettingsMenu/settings_menu.gd" id="1_rj8ut"]
-[ext_resource type="Theme" uid="uid://bj6c6uajd8ida" path="res://MainMenuTheme.tres" id="2_pbme0"]
+[ext_resource type="Theme" uid="uid://bj6c6uajd8ida" path="res://Menus/MainMenuTheme.tres" id="2_pbme0"]
+[ext_resource type="FontFile" uid="uid://d2p47n8ulcq1l" path="res://Menus/Fonts/PixelOperator8.ttf" id="3_6qxfb"]
 
-[node name="SettingsMenu" type="CanvasLayer"]
+[node name="SettingsMenu" type="CanvasLayer" node_paths=PackedStringArray("ambience_slider", "ambience_label")]
 script = ExtResource("1_rj8ut")
+ambience_slider = NodePath("Control/VBoxContainer/Ambience Slider")
+ambience_label = NodePath("Control/VBoxContainer/Ambience Slider/Ambinece Slider Label")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_as_relative = false
@@ -76,13 +79,42 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 55
 
-[node name="HSlider" type="HSlider" parent="Control/VBoxContainer"]
+[node name="Ambience Slider" type="HSlider" parent="Control/VBoxContainer"]
 layout_mode = 2
+max_value = 10.0
+step = 0.5
 
-[node name="HSlider2" type="HSlider" parent="Control/VBoxContainer"]
-layout_mode = 2
+[node name="Ambinece Slider Label" type="Label" parent="Control/VBoxContainer/Ambience Slider"]
+layout_mode = 0
+offset_left = 0.385684
+offset_top = -39.098
+offset_right = 56.3857
+offset_bottom = -7.09796
+theme_override_fonts/font = ExtResource("3_6qxfb")
+theme_override_font_sizes/font_size = 32
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="HSlider3" type="HSlider" parent="Control/VBoxContainer"]
-layout_mode = 2
+[node name="Ambinece Slider Label2" type="Label" parent="Control/VBoxContainer/Ambience Slider"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.04
+offset_top = -61.658
+offset_right = 92.9598
+offset_bottom = -29.658
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.20255, 1.20255)
+theme_override_fonts/font = ExtResource("3_6qxfb")
+theme_override_font_sizes/font_size = 32
+text = "Ambience"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Control/VBoxContainer2/Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="Control/VBoxContainer/Ambience Slider" to="." method="_on_ambience_slider_value_changed"]

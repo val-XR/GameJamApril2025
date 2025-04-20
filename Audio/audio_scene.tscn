@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://myq2ctmpcduv"]
+
+[ext_resource type="AudioStream" uid="uid://c77hecnscowds" path="res://Audio/underwater-19568.mp3" id="1_vo0ct"]
+
+[node name="AudioScene" type="Node"]
+
+[node name="Audio Player" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_vo0ct")
+panning_strength = 0.0
+bus = &"Ambience"
+playback_type = 1
+parameters/looping = true
