@@ -4,6 +4,8 @@ var Oxygen = 300
 var IsMoving = false
 var OldLocation: Vector2
 signal NoAir
+var Change = Oxygen / 10
+var NextChange = Oxygen - Change
 
 func _on_timeout() -> void:
 	if Oxygen <= 0:
@@ -28,3 +30,8 @@ func _on_old_pos_timeout() -> void:
 		# if Oldlocation is not equal to new location
 		IsMoving = true
 		OldLocation = player.global_position
+		
+func _process(delta: float) -> void:
+	if NextChange >= Oxygen:
+		%O2AnimatedSprite2D2.frame += 1
+		NextChange = Oxygen - Change

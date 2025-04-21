@@ -372,13 +372,13 @@ sprite_frames = SubResource("SpriteFrames_bj30b")
 autoplay = "default"
 frame_progress = 0.148321
 
-[node name="O2 AnimatedSprite2D2" type="AnimatedSprite2D" parent="HUD"]
+[node name="O2AnimatedSprite2D2" type="AnimatedSprite2D" parent="HUD"]
+unique_name_in_owner = true
 light_mask = 16
 position = Vector2(38, 145)
 rotation = -1.57079
 scale = Vector2(1.77139, 1.77139)
 sprite_frames = SubResource("SpriteFrames_60mlk")
-frame_progress = 0.244346
 offset = Vector2(-29.555, 0)
 
 [node name="Battery AnimatedSprite2D" type="AnimatedSprite2D" parent="HUD"]

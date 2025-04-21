@@ -1,14 +1,14 @@
 extends CharacterBody2D
 
 var is_dragging := false
-var health = 100
+var health = 20
 
 func _ready() -> void:
 	$OxygenTimer.NoAir.connect(No_Air)
 
 func No_Air():
 	if health <= 0:
-		pass
+		get_tree().change_scene_to_file("res://Menus/MainMenu/MainMenu.tscn")
 	else:
 		health -= 1
 		print("Health:", health)
