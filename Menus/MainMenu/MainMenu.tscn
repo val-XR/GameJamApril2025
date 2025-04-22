@@ -108,5 +108,5 @@ script = ExtResource("3_jyye3")
 [connection signal="pressed" from="Control/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Blue Moon Creations" to="." method="_on_blue_moon_creations_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Quit" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Quit" to="." method="_on_credits_pressed"]
