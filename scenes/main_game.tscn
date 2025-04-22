@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://bukrnqashm7fy"]
+[gd_scene load_steps=36 format=4 uid="uid://bukrnqashm7fy"]
 
 [ext_resource type="PackedScene" uid="uid://bncg5w35j5q15" path="res://scenes/player.tscn" id="1_72e8q"]
 [ext_resource type="Texture2D" uid="uid://kvofeuyaeh8g" path="res://textures/Background Forground/TestSpriteSheet (2).png" id="1_s3esy"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://cqakmfgxd21dp" path="res://scenes/Decorations/sunken_nuke.tscn" id="22_wdxbp"]
 [ext_resource type="PackedScene" uid="uid://bqtky6bqdvdny" path="res://scenes/Decorations/damaged_submarine.tscn" id="23_x3ega"]
 [ext_resource type="PackedScene" uid="uid://gsu2jrox1id6" path="res://scenes/Decorations/ceiling_seaweed.tscn" id="24_x3ega"]
+[ext_resource type="PackedScene" uid="uid://bgml31du50kk3" path="res://scenes/CreatureScenes/squid.tscn" id="28_dcudo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_72e8q"]
 texture = ExtResource("1_s3esy")
@@ -312,6 +313,10 @@ texture = ExtResource("16_ihbck")
 [node name="Waypoint4" type="PointLight2D" parent="Waypoints"]
 position = Vector2(433, 137)
 texture = ExtResource("16_ihbck")
+
+[node name="Squid" parent="." instance=ExtResource("28_dcudo")]
+position = Vector2(-38, -19)
+scale = Vector2(0.48, 0.48)
 
 [editable path="Crystal Group/Crystal"]
 [editable path="Crystal Group/Crystal4"]
