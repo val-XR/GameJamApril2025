@@ -27,6 +27,7 @@ CollectedScrap="*res://collected_scrap.gd"
 ResourcesDictionary="*res://resources_dictionary.gd"
 AudioScene="*res://Audio/audio_scene.tscn"
 SettingsMenu="*res://Menus/SettingsMenu/settings_menu.gd"
+GlobalPlayer="*res://GlobalPlayer.gd"
 
 [layer_names]
 

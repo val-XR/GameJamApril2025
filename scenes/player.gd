@@ -1,10 +1,13 @@
 extends CharacterBody2D
 
 var is_dragging := false
-var health = 20
+var health = GlobalPlayer.PlayerHealthGet()
+
 
 func _ready() -> void:
 	$OxygenTimer.NoAir.connect(No_Air)
+	GlobalPlayer.PlayerHealthSet(100)
+	
 
 func No_Air():
 	if health <= 0:
