@@ -4,6 +4,8 @@ extends CanvasLayer
 # assign total value label
 @export var total_value_label : Label
 
+# health bar sprite
+@export var healthbar : AnimatedSprite2D
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,3 +29,10 @@ func _process(delta: float) -> void:
 		
 	# set label to total value
 	total_value_label.text = "$" + str(total_value)
+	
+
+	var health : float = GlobalPlayer.PlayerHealthGet()
+	var frame : int = floor(health / 10)
+	healthbar.frame = frame
+	
+	
