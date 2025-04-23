@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bgml31du50kk3"]
+[gd_scene load_steps=21 format=3 uid="uid://bgml31du50kk3"]
 
 [ext_resource type="Texture2D" uid="uid://cknav5lgvh7uq" path="res://textures/Creatures/squid_02.png" id="1_dbd8e"]
+[ext_resource type="Texture2D" uid="uid://cx1g817lug7n1" path="res://textures/Creatures/squid_attack_animation_01.png" id="2_e4u8m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e4u8m"]
 atlas = ExtResource("1_dbd8e")
@@ -38,9 +39,107 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6ti3"]
+atlas = ExtResource("2_e4u8m")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xkak"]
+atlas = ExtResource("2_e4u8m")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_et27x"]
+atlas = ExtResource("2_e4u8m")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7u8f"]
+atlas = ExtResource("2_e4u8m")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2e2eu"]
+atlas = ExtResource("2_e4u8m")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1ctw"]
+atlas = ExtResource("2_e4u8m")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pcjg"]
+atlas = ExtResource("2_e4u8m")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvts3"]
+atlas = ExtResource("2_e4u8m")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pm5tu"]
+atlas = ExtResource("2_e4u8m")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7hfw"]
+atlas = ExtResource("2_e4u8m")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6h6q"]
+atlas = ExtResource("2_e4u8m")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6jyq"]
+atlas = ExtResource("2_e4u8m")
+region = Rect2(1408, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yg57n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6ti3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xkak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_et27x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7u8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2e2eu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1ctw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pcjg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvts3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pm5tu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7hfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6h6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6jyq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
 [node name="Squid" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_d6ti3")
 autoplay = "default"
 frame_progress = 0.518157
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yg57n")
+autoplay = "default"
+frame_progress = 0.555065

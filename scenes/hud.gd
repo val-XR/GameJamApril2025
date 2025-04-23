@@ -34,5 +34,6 @@ func _process(delta: float) -> void:
 	var health : float = GlobalPlayer.PlayerHealthGet()
 	var frame : int = floor(health / 10)
 	healthbar.frame = frame
+	print("Health bar frame set: " + str(frame))
 	
 	
