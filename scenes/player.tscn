@@ -449,6 +449,11 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_wqfne")
 frame_progress = 0.553706
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.001
+autostart = true
+
 [connection signal="NoAir" from="OxygenTimer" to="OxygenTimer" method="_on_no_air"]
 [connection signal="timeout" from="OxygenTimer" to="OxygenTimer" method="_on_timeout"]
 [connection signal="timeout" from="OldPos" to="OxygenTimer" method="_on_old_pos_timeout"]
+[connection signal="timeout" from="Timer" to="OxygenTimer" method="_on_timer_timeout"]
