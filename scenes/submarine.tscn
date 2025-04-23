@@ -1,12 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://xkstenrakr2w"]
+[gd_scene load_steps=5 format=3 uid="uid://xkstenrakr2w"]
 
 [ext_resource type="Texture2D" uid="uid://b45r221mfsnt1" path="res://textures/Decorations/Main_Submarine.png" id="1_r3h5y"]
+[ext_resource type="Script" uid="uid://kcupcuou7ylb" path="res://scenes/submarine.gd" id="2_cjhfg"]
 [ext_resource type="Texture2D" uid="uid://cv8vhcvdenulg" path="res://textures/Lights/light.png" id="2_qvldv"]
 
-[node name="Sprite2D" type="Sprite2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3h5y"]
+size = Vector2(58, 16)
+
+[node name="Submarine" type="Sprite2D"]
 texture = ExtResource("1_r3h5y")
+script = ExtResource("2_cjhfg")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(44, -4)
 rotation = 6.28318
 texture = ExtResource("2_qvldv")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -30.0
+offset_top = -11.0
+offset_right = 31.0
+offset_bottom = 5.0
+flat = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, -4)
+shape = SubResource("RectangleShape2D_r3h5y")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

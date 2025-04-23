@@ -25,21 +25,21 @@ func PlayerHealthSet(amount):
 
 
 
-@onready var oxygen : float = 100
+@onready var player_oxygen : float = 100
 
-# gives player health
+# gives player oxygen
 func PlayerOxygenGet():
-	return player_health
-	print("Health Value Requested: " + str(player_health))
+	return player_oxygen
+	print("Oxygen Value Requested: " + str(player_oxygen))
 	
 
-# change player health
+# change player oxygen
 func PlayerOxygenAdd(amount):
-	player_health += amount
-	print("Health Value Add: " + str(player_health))
+	player_oxygen += amount
+	print("Oxygen Value Add: " + str(player_oxygen))
 
 
-# set player health
+# set player oxygen
 func PlayerOxygenSet(amount):
-	player_health = amount
-	print("Health Value Set: " + str(player_health))
+	player_oxygen = amount
+	print("Oxygen Value Set: " + str(player_oxygen))

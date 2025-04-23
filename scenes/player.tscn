@@ -86,43 +86,43 @@ animations = [{
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
 atlas = ExtResource("4_qlg0r")
-region = Rect2(0, 0, 64, 16)
+region = Rect2(576, 0, 64, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
 atlas = ExtResource("4_qlg0r")
-region = Rect2(64, 0, 64, 16)
+region = Rect2(512, 0, 64, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
 atlas = ExtResource("4_qlg0r")
-region = Rect2(128, 0, 64, 16)
+region = Rect2(448, 0, 64, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jej6c"]
 atlas = ExtResource("4_qlg0r")
-region = Rect2(192, 0, 64, 16)
+region = Rect2(384, 0, 64, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f1ej7"]
 atlas = ExtResource("4_qlg0r")
-region = Rect2(256, 0, 64, 16)
+region = Rect2(320, 0, 64, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oprun"]
 atlas = ExtResource("4_qlg0r")
-region = Rect2(320, 0, 64, 16)
+region = Rect2(256, 0, 64, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a8ls1"]
 atlas = ExtResource("4_qlg0r")
-region = Rect2(384, 0, 64, 16)
+region = Rect2(192, 0, 64, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qfm1y"]
 atlas = ExtResource("4_qlg0r")
-region = Rect2(448, 0, 64, 16)
+region = Rect2(128, 0, 64, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fulsm"]
 atlas = ExtResource("4_qlg0r")
-region = Rect2(512, 0, 64, 16)
+region = Rect2(64, 0, 64, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r5pv"]
 atlas = ExtResource("4_qlg0r")
-region = Rect2(576, 0, 64, 16)
+region = Rect2(0, 0, 64, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d2wvv"]
 animations = [{
@@ -372,10 +372,11 @@ script = ExtResource("3_qhqgy")
 wait_time = 0.1
 autostart = true
 
-[node name="HUD" type="CanvasLayer" parent="." node_paths=PackedStringArray("total_value_label", "healthbar")]
+[node name="HUD" type="CanvasLayer" parent="." node_paths=PackedStringArray("total_value_label", "healthbar", "oxygen_bar")]
 script = ExtResource("4_fjrip")
 total_value_label = NodePath("CanvasGroup/VBoxContainer/Total Value")
 healthbar = NodePath("CanvasGroup/VBoxContainer/HBoxContainer/Health AnimatedSprite2D")
+oxygen_bar = NodePath("CanvasGroup/VBoxContainer/HBoxContainer/O2AnimatedSprite2D2")
 
 [node name="CanvasGroup" type="CanvasGroup" parent="HUD"]
 

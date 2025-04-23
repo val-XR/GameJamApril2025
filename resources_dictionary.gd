@@ -8,6 +8,7 @@ var resources = {
 	"O2Tank2":      {"display_name": "O2 Tank", "value": "40"},
 	"ScrapPipe2":      {"display_name": "Pipe Scrap", "value": "35"},
 	"ScrapPropeller2":      {"display_name": "Propeller Scrap", "value": "40"},
+	"Submarine":      {"display_name": "Leave", "value": " Sell $"},
 	}
 
 # passes resource dictionary. Call it through ResourcesDictionary.dictionary

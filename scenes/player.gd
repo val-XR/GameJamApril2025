@@ -2,11 +2,13 @@ extends CharacterBody2D
 
 var is_dragging := false
 var health = GlobalPlayer.PlayerHealthGet()
+var oxygen_decrease_rate = 0.01
 
 
 func _ready() -> void:
 	$OxygenTimer.NoAir.connect(No_Air)
 	GlobalPlayer.PlayerHealthSet(100)
+	GlobalPlayer.PlayerOxygenSet(100)
 	
 
 func No_Air():
@@ -55,3 +57,8 @@ func _process(delta: float) -> void:
 		rotation = lerp_angle(rotation, target_angle, delta * 9)  # Smooth turn
 
 		move_and_slide()
+		
+		GlobalPlayer.PlayerOxygenAdd(-3 * oxygen_decrease_rate)
+	
+	else:
+		GlobalPlayer.PlayerOxygenAdd(-1 * oxygen_decrease_rate)
