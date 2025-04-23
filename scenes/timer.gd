@@ -1,11 +1,13 @@
 extends Timer
 
+const MaxOxygen = 300
 var Oxygen = 300
 var IsMoving = false
 var OldLocation: Vector2
 signal NoAir
 var Change = Oxygen / 10
 var NextChange = Oxygen - Change
+var RefillAir = Oxygen + Change
 
 func _on_timeout() -> void:
 	if Oxygen <= 0:
@@ -34,4 +36,13 @@ func _on_old_pos_timeout() -> void:
 func _process(delta: float) -> void:
 	if NextChange >= Oxygen:
 		%O2AnimatedSprite2D2.frame += 1
+		RefillAir = NextChange
 		NextChange = Oxygen - Change
+	elif RefillAir <= Oxygen:
+		%O2AnimatedSprite2D2.frame -= 1
+		# NOT WORKING ATM
+
+func _on_timer_timeout() -> void:
+		if Input.is_action_pressed("Test"):
+			if Oxygen < MaxOxygen:
+				Oxygen += 1
