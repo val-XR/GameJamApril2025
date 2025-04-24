@@ -2,7 +2,7 @@ extends CanvasLayer
 
 
 # assign total value label
-@export var total_value_label : Label
+@export var carrying_value_label : Label
 
 # assign total deposited value label
 @export var total_deposited_value_label : Label
@@ -22,19 +22,19 @@ func _process(delta: float) -> void:
 	# get resources dictionary from gloabl autoload
 	var resources_dictionary = ResourcesDictionary.dictionary()
 	
-	# total value
-	var total_value: int = 0
+	# carying value
+	var carrying_value: int = 0
 	
 	for node in scrap_list:
 		
 		# add up total value
-		total_value += int(resources_dictionary[node.name]["value"])
+		carrying_value += int(resources_dictionary[node.name]["value"])
 		
 	# set label to total value
-	total_value_label.text = "$" + str(total_value)
+	carrying_value_label.text = "$" + str(carrying_value)
 	
 	# set label to deposited total value
-	total_deposited_value_label.text = "$" +str(GlobalPlayer.CarryingValueGet())
+	total_deposited_value_label.text = "$" +str(GlobalPlayer.TotalValueGet())
 	
 	# healthbar
 	var health : float = GlobalPlayer.PlayerHealthGet()
@@ -46,6 +46,11 @@ func _process(delta: float) -> void:
 	var oxygen : float = GlobalPlayer.PlayerOxygenGet()
 	var oxygen_frame : int = floor(oxygen / 10)
 	oxygen_bar.frame = oxygen_frame
-	print("Oxygen bar frame set: " + str(oxygen_frame))
+	#print("Oxygen bar frame set: " + str(oxygen_frame))
+	
+	# Total Value display
+	var total_value : float = GlobalPlayer.TotalValueGet()
+	total_deposited_value_label.text = "$" + str(total_value)
+	#print("total value display set: " + str(total_value))
 	
 	

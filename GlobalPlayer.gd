@@ -34,19 +34,19 @@ func PlayerHealthSet(amount):
 
 # gets player oxygen
 func PlayerOxygenGet():
-	print("Oxygen Value Requested: " + str(player_oxygen))
+	#print("Oxygen Value Requested: " + str(player_oxygen))
 	return player_oxygen
 
 # change player oxygen
 func PlayerOxygenAdd(amount):
 	player_oxygen += amount
-	print("Oxygen Value Add: " + str(player_oxygen))
+	#print("Oxygen Value Add: " + str(player_oxygen))
 
 
 # set player oxygen
 func PlayerOxygenSet(amount):
 	player_oxygen = amount
-	print("Oxygen Value Set: " + str(player_oxygen))
+	#print("Oxygen Value Set: " + str(player_oxygen))
 
 
 
@@ -61,7 +61,7 @@ func TotalValueGet():
 
 # change total value
 func TotalValueAdd(amount):
-	total_value += amount
+	#total_value += amount
 	print("Total Value Added: " + str(total_value))
 
 
@@ -88,3 +88,4 @@ func CarryingValueGet():
 		total_value += int(resources_dictionary[node.name]["value"])
 	
 	return total_value
+	print("Carrying Value Requested")

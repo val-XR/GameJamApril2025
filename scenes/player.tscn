@@ -376,9 +376,9 @@ script = ExtResource("3_qhqgy")
 wait_time = 0.1
 autostart = true
 
-[node name="HUD" type="CanvasLayer" parent="." node_paths=PackedStringArray("total_value_label", "total_deposited_value_label", "healthbar", "oxygen_bar")]
+[node name="HUD" type="CanvasLayer" parent="." node_paths=PackedStringArray("carrying_value_label", "total_deposited_value_label", "healthbar", "oxygen_bar")]
 script = ExtResource("4_fjrip")
-total_value_label = NodePath("CanvasGroup/VBoxContainer/Carrying Value")
+carrying_value_label = NodePath("CanvasGroup/VBoxContainer/Carrying Value")
 total_deposited_value_label = NodePath("CanvasGroup/Total Deposited Value")
 healthbar = NodePath("CanvasGroup/VBoxContainer/HBoxContainer/Health AnimatedSprite2D")
 oxygen_bar = NodePath("CanvasGroup/VBoxContainer/HBoxContainer/O2AnimatedSprite2D2")

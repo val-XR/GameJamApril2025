@@ -8,27 +8,9 @@ func _ready() -> void:
 
 
 func _on_button_pressed() -> void:
-	# get list of scrap from gloabl autoload
-	var scrap_list = CollectedScrap.collected_scrap_list()
+
+	# convert
+	var total_value = GlobalPlayer.TotalValueGet()
+	var carrying_value = GlobalPlayer.CarryingValueGet()
 	
-	# get resources dictionary from gloabl autoload
-	var resources_dictionary = ResourcesDictionary.dictionary()
-	
-	# total value
-	var total_value: int = 0
-	
-	for node in scrap_list:
-		
-		# add up total value
-		total_value += int(resources_dictionary[node.name]["value"])
-		
-	# set label to total value
-	if !(total_value > 100):
-		print("Not Enough Collected")
-	else:
-		var carrying_value = GlobalPlayer.CarryingValueGet()
-		
-		# set total value
-		GlobalPlayer.TotalValueSet(carrying_value)
-		
-		print("Congrats!")
+	GlobalPlayer.TotalValueAdd(carrying_value)
