@@ -3,13 +3,15 @@ extends Node
 
 @export var Player: CharacterBody2D
 
+# health vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 
 @onready var player_health : float = 100
 
 # gives player health
 func PlayerHealthGet():
-	return player_health
 	print("Health Value Requested: " + str(player_health))
+	return player_health
+
 	
 
 # change player health
@@ -25,13 +27,15 @@ func PlayerHealthSet(amount):
 
 
 
+
+# oxygen vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
 @onready var player_oxygen : float = 100
 
-# gives player oxygen
+# gets player oxygen
 func PlayerOxygenGet():
-	return player_oxygen
 	print("Oxygen Value Requested: " + str(player_oxygen))
-	
+	return player_oxygen
 
 # change player oxygen
 func PlayerOxygenAdd(amount):
@@ -43,3 +47,25 @@ func PlayerOxygenAdd(amount):
 func PlayerOxygenSet(amount):
 	player_oxygen = amount
 	print("Oxygen Value Set: " + str(player_oxygen))
+
+
+
+# total value vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+@onready var total_value : float = 0
+
+# gets total value
+func TotalValueGet():
+	print("Total Value Requested: " + str(total_value))
+	return total_value
+
+# change total value
+func TotalValueAdd(amount):
+	total_value += amount
+	print("Total Value Added: " + str(total_value))
+
+
+# set total value
+func TotalValueSet(amount):
+	total_value = amount
+	print("Total Value Set: " + str(total_value))
