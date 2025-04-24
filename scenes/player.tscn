@@ -376,9 +376,10 @@ script = ExtResource("3_qhqgy")
 wait_time = 0.1
 autostart = true
 
-[node name="HUD" type="CanvasLayer" parent="." node_paths=PackedStringArray("total_value_label", "healthbar", "oxygen_bar")]
+[node name="HUD" type="CanvasLayer" parent="." node_paths=PackedStringArray("total_value_label", "total_deposited_value_label", "healthbar", "oxygen_bar")]
 script = ExtResource("4_fjrip")
-total_value_label = NodePath("CanvasGroup/VBoxContainer/Total Value")
+total_value_label = NodePath("CanvasGroup/VBoxContainer/Carrying Value")
+total_deposited_value_label = NodePath("CanvasGroup/Total Deposited Value")
 healthbar = NodePath("CanvasGroup/VBoxContainer/HBoxContainer/Health AnimatedSprite2D")
 oxygen_bar = NodePath("CanvasGroup/VBoxContainer/HBoxContainer/O2AnimatedSprite2D2")
 
@@ -414,7 +415,7 @@ theme_override_fonts/font = ExtResource("5_smehm")
 theme_override_font_sizes/font_size = 32
 text = "Carried Scrap"
 
-[node name="Total Value" type="Label" parent="HUD/CanvasGroup/VBoxContainer"]
+[node name="Carrying Value" type="Label" parent="HUD/CanvasGroup/VBoxContainer"]
 light_mask = 16
 layout_mode = 2
 size_flags_horizontal = 0
@@ -456,6 +457,30 @@ rotation = -1.57079
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_wqfne")
 frame_progress = 0.553706
+
+[node name="Label3" type="Label" parent="HUD/CanvasGroup"]
+light_mask = 16
+offset_left = 287.0
+offset_top = 64.0
+offset_right = 631.0
+offset_bottom = 96.0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
+theme_override_fonts/font = ExtResource("5_smehm")
+theme_override_font_sizes/font_size = 32
+text = "Carried Scrap"
+
+[node name="Total Deposited Value" type="Label" parent="HUD/CanvasGroup"]
+light_mask = 16
+offset_left = 287.0
+offset_top = 97.1637
+offset_right = 399.0
+offset_bottom = 161.164
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
+theme_override_fonts/font = ExtResource("5_smehm")
+theme_override_font_sizes/font_size = 64
+text = "$0"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.001

@@ -26,4 +26,9 @@ func _on_button_pressed() -> void:
 	if !(total_value > 100):
 		print("Not Enough Collected")
 	else:
+		var carrying_value = GlobalPlayer.CarryingValueGet()
+		
+		# set total value
+		GlobalPlayer.TotalValueSet(carrying_value)
+		
 		print("Congrats!")

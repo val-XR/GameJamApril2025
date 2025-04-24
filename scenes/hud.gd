@@ -4,6 +4,9 @@ extends CanvasLayer
 # assign total value label
 @export var total_value_label : Label
 
+# assign total deposited value label
+@export var total_deposited_value_label : Label
+
 # health bar sprite
 @export var healthbar : AnimatedSprite2D
 
@@ -29,6 +32,9 @@ func _process(delta: float) -> void:
 		
 	# set label to total value
 	total_value_label.text = "$" + str(total_value)
+	
+	# set label to deposited total value
+	total_deposited_value_label.text = "$" +str(GlobalPlayer.CarryingValueGet())
 	
 	# healthbar
 	var health : float = GlobalPlayer.PlayerHealthGet()

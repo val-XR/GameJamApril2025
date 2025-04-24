@@ -69,3 +69,22 @@ func TotalValueAdd(amount):
 func TotalValueSet(amount):
 	total_value = amount
 	print("Total Value Set: " + str(total_value))
+
+
+
+func CarryingValueGet():
+	# get list of scrap from gloabl autoload
+	var scrap_list = CollectedScrap.collected_scrap_list()
+	
+	# get resources dictionary from gloabl autoload
+	var resources_dictionary = ResourcesDictionary.dictionary()
+	
+	# total value
+	var total_value: int = 0
+	
+	for node in scrap_list:
+		
+		# add up total value
+		total_value += int(resources_dictionary[node.name]["value"])
+	
+	return total_value
