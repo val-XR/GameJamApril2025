@@ -12,11 +12,11 @@ func _ready() -> void:
 	
 
 func No_Air():
-	if health <= 0:
-		get_tree().change_scene_to_file("res://Menus/MainMenu/MainMenu.tscn")
+	if GlobalPlayer.PlayerHealthGet() <= 0:
+		print("Dead")
+		#get_tree().change_scene_to_file("res://Menus/MainMenu/MainMenu.tscn")
 	else:
-		health -= 1
-		print("Health:", health)
+		pass
 
 
 
@@ -62,3 +62,10 @@ func _process(delta: float) -> void:
 	
 	else:
 		GlobalPlayer.PlayerOxygenAdd(-1 * oxygen_decrease_rate)
+		
+	if GlobalPlayer.PlayerOxygenGet() <= 0:
+		#GlobalPlayer.PlayerHealthSet(0)
+		GlobalPlayer.PlayerHealthAdd(-0.01)
+		print("Out of o2")
+	else:
+		pass

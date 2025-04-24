@@ -41,7 +41,6 @@ Test={
 
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Pus"
-2d_physics/layer_12="Enemies"
 
 [rendering]
 
