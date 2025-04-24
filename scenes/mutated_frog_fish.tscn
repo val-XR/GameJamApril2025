@@ -1,8 +1,73 @@
-[gd_scene load_steps=6 format=3 uid="uid://g1537spoqicn"]
+[gd_scene load_steps=16 format=3 uid="uid://g1537spoqicn"]
 
 [ext_resource type="Script" uid="uid://cht2hltq8o3g5" path="res://scenes/mutated_frog_fish.gd" id="1_l38ar"]
 [ext_resource type="Texture2D" uid="uid://ddwjewluijdl2" path="res://textures/Creatures/Mutated_Fish_1.png" id="1_xr161"]
+[ext_resource type="Texture2D" uid="uid://c40jjy2l57pj2" path="res://textures/Creatures/frog_fish_animation.png" id="2_jkdiw"]
 [ext_resource type="Script" uid="uid://cno2s7oco8g1w" path="res://scenes/area_2d.gd" id="3_l38ar"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71a8f"]
+atlas = ExtResource("2_jkdiw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82ki5"]
+atlas = ExtResource("2_jkdiw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbfex"]
+atlas = ExtResource("2_jkdiw")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3oeb"]
+atlas = ExtResource("2_jkdiw")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtnax"]
+atlas = ExtResource("2_jkdiw")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i56tw"]
+atlas = ExtResource("2_jkdiw")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6med7"]
+atlas = ExtResource("2_jkdiw")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wo2l6"]
+atlas = ExtResource("2_jkdiw")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4sr2i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71a8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82ki5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbfex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3oeb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtnax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i56tw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6med7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wo2l6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jkdiw"]
 radius = 14.0357
@@ -17,7 +82,14 @@ motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_l38ar")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -13)
+sprite_frames = SubResource("SpriteFrames_4sr2i")
+autoplay = "default"
+frame_progress = 0.248125
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(0, -16)
 texture = ExtResource("1_xr161")
 

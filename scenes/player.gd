@@ -13,10 +13,17 @@ func _ready() -> void:
 
 func No_Air():
 	if GlobalPlayer.PlayerHealthGet() <= 0:
+<<<<<<< Updated upstream
 		print("Dead")
 		#get_tree().change_scene_to_file("res://Menus/MainMenu/MainMenu.tscn")
 	else:
 		pass
+=======
+		get_tree().change_scene_to_file("res://Menus/MainMenu/MainMenu.tscn")
+	else:
+		GlobalPlayer.PlayerHealthAdd(-1)
+		print("Health:", health)
+>>>>>>> Stashed changes
 
 
 
