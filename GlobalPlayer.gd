@@ -56,21 +56,23 @@ func PlayerOxygenSet(amount):
 
 # gets total value
 func TotalValueGet():
-	print("Total Value Requested: " + str(total_value))
+	#print("Total Value Requested: " + str(total_value))
 	return total_value
 
 # change total value
 func TotalValueAdd(amount):
-	#total_value += amount
-	print("Total Value Added: " + str(total_value))
+	total_value += amount
+	#print("Total Value Added: " + str(total_value))
 
 
 # set total value
 func TotalValueSet(amount):
 	total_value = amount
-	print("Total Value Set: " + str(total_value))
+	#print("Total Value Set: " + str(total_value))
 
 
+
+# carrying value vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 
 func CarryingValueGet():
 	# get list of scrap from gloabl autoload

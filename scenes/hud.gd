@@ -16,25 +16,9 @@ extends CanvasLayer
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
-	# get list of scrap from gloabl autoload
-	var scrap_list = CollectedScrap.collected_scrap_list()
-	
-	# get resources dictionary from gloabl autoload
-	var resources_dictionary = ResourcesDictionary.dictionary()
-	
-	# carying value
-	var carrying_value: int = 0
-	
-	for node in scrap_list:
-		
-		# add up total value
-		carrying_value += int(resources_dictionary[node.name]["value"])
-		
-	# set label to total value
-	carrying_value_label.text = "$" + str(carrying_value)
 	
 	# set label to deposited total value
-	total_deposited_value_label.text = "$" +str(GlobalPlayer.TotalValueGet())
+	carrying_value_label.text = "$" +str(GlobalPlayer.CarryingValueGet())
 	
 	# healthbar
 	var health : float = GlobalPlayer.PlayerHealthGet()
