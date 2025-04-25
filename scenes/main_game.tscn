@@ -1241,6 +1241,9 @@ position = Vector2(1054, -1400)
 [node name="Airvent8" parent="Misc Decoration Group" instance=ExtResource("20_cybgu")]
 position = Vector2(1083, -3159)
 
+[node name="Airvent9" parent="Misc Decoration Group" instance=ExtResource("20_cybgu")]
+position = Vector2(200, -3960)
+
 [node name="Sunken Submarine" parent="Misc Decoration Group" instance=ExtResource("21_wdxbp")]
 position = Vector2(25, 34)
 

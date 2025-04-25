@@ -39,13 +39,14 @@ func PlayerOxygenGet():
 
 # change player oxygen
 func PlayerOxygenAdd(amount):
-	player_oxygen += amount
+	# clamps value
+	player_oxygen = clamp(player_oxygen + amount, 0, 100)
 	#print("Oxygen Value Add: " + str(player_oxygen))
 
 
 # set player oxygen
 func PlayerOxygenSet(amount):
-	player_oxygen = amount
+	player_oxygen = clamp(amount, 0, 100)
 	#print("Oxygen Value Set: " + str(player_oxygen))
 
 
@@ -61,13 +62,13 @@ func TotalValueGet():
 
 # change total value
 func TotalValueAdd(amount):
-	total_value += amount
+	total_value = clamp(total_value + amount, 0, 100)
 	#print("Total Value Added: " + str(total_value))
 
 
 # set total value
 func TotalValueSet(amount):
-	total_value = amount
+	total_value = clamp(amount, 0, 100)
 	#print("Total Value Set: " + str(total_value))
 
 

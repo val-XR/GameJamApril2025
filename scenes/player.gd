@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var is_dragging := false
 var health = GlobalPlayer.PlayerHealthGet()
-var oxygen_decrease_rate = 0.01
+var oxygen_decrease_rate = 0.005
 
 
 func _ready() -> void:
