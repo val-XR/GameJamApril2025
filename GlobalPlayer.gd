@@ -9,7 +9,7 @@ extends Node
 
 # gives player health
 func PlayerHealthGet():
-	print("Health Value Requested: " + str(player_health))
+	#print("Health Value Requested: " + str(player_health))
 	return player_health
 
 	
@@ -17,13 +17,13 @@ func PlayerHealthGet():
 # change player health
 func PlayerHealthAdd(amount):
 	player_health += amount
-	print("Health Value Add: " + str(player_health))
+	#print("Health Value Add: " + str(player_health))
 
 
 # set player health
 func PlayerHealthSet(amount):
 	player_health = amount
-	print("Health Value Set: " + str(player_health))
+	#print("Health Value Set: " + str(player_health))
 
 
 

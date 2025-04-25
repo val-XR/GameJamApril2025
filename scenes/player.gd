@@ -26,7 +26,8 @@ func _unhandled_input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			is_dragging = event.pressed  # true when pressed, false when released
 		if event is InputEventMouseMotion and is_dragging:
-			print("Dragging at: ", event.position)
+			#print("Dragging at: ", event.position)
+			pass
 
 
 

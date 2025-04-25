@@ -34,7 +34,7 @@ func _process(delta: float) -> void:
 	
 	# Total Value display
 	var total_value : float = GlobalPlayer.TotalValueGet()
-	total_deposited_value_label.text = "$" + str(total_value)
+	total_deposited_value_label.text = "$" + str(int(total_value))
 	#print("total value display set: " + str(total_value))
 	
 	

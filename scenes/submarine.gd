@@ -14,3 +14,5 @@ func _on_button_pressed() -> void:
 	var carrying_value = GlobalPlayer.CarryingValueGet()
 	
 	GlobalPlayer.TotalValueAdd(carrying_value)
+	
+	CollectedScrap.clear()

@@ -12,6 +12,8 @@ extends RigidBody2D
 
 @export var minimum_distance: float = 30
 
+
+
 # Called every physics frame (used for movement/physics updates)
 func _physics_process(delta: float) -> void:
 	# Only execute follow logic if the flag is enabled and player is assigned
@@ -43,3 +45,9 @@ func _process(delta):
 		line_node.clear_points()
 		line_node.add_point((object_a.global_position) + offset)
 		line_node.add_point((object_b.global_position) + offset)
+		line_node.clear_points()
+
+
+# clear line
+func clear_line():
+	line_node.clear_points()

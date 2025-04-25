@@ -378,35 +378,23 @@ autostart = true
 
 [node name="HUD" type="CanvasLayer" parent="." node_paths=PackedStringArray("carrying_value_label", "total_deposited_value_label", "healthbar", "oxygen_bar")]
 script = ExtResource("4_fjrip")
-carrying_value_label = NodePath("CanvasGroup/VBoxContainer/Carrying Value")
-total_deposited_value_label = NodePath("CanvasGroup/Total Deposited Value")
+carrying_value_label = NodePath("CanvasGroup/VBoxContainer/Carrying Value Label/Carrying Value")
+total_deposited_value_label = NodePath("CanvasGroup/VBoxContainer/Total Scrap Label/Total Deposited Value")
 healthbar = NodePath("CanvasGroup/VBoxContainer/HBoxContainer/Health AnimatedSprite2D")
 oxygen_bar = NodePath("CanvasGroup/VBoxContainer/HBoxContainer/O2AnimatedSprite2D2")
 
 [node name="CanvasGroup" type="CanvasGroup" parent="HUD"]
 position = Vector2(23, 25)
 
-[node name="Label" type="Label" parent="HUD/CanvasGroup"]
-light_mask = 16
-offset_left = 14.0
-offset_top = 14.0
-offset_right = 974.0
-offset_bottom = 89.0
-scale = Vector2(0.280001, 0.280001)
-theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
-theme_override_fonts/font = ExtResource("5_smehm")
-theme_override_font_sizes/font_size = 64
-text = "Pirates Of The Deep"
-
 [node name="VBoxContainer" type="VBoxContainer" parent="HUD/CanvasGroup"]
-offset_left = 15.0
-offset_top = 62.0
-offset_right = 359.0
-offset_bottom = 198.0
-scale = Vector2(0.637763, 0.637763)
-theme_override_constants/separation = 20
+offset_right = 344.0
+offset_bottom = 314.0
+scale = Vector2(0.797763, 0.797763)
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_constants/separation = 125
 
-[node name="Label2" type="Label" parent="HUD/CanvasGroup/VBoxContainer"]
+[node name="Carrying Value Label" type="Label" parent="HUD/CanvasGroup/VBoxContainer"]
 light_mask = 16
 layout_mode = 2
 size_flags_horizontal = 0
@@ -415,9 +403,33 @@ theme_override_fonts/font = ExtResource("5_smehm")
 theme_override_font_sizes/font_size = 32
 text = "Carried Scrap"
 
-[node name="Carrying Value" type="Label" parent="HUD/CanvasGroup/VBoxContainer"]
+[node name="Carrying Value" type="Label" parent="HUD/CanvasGroup/VBoxContainer/Carrying Value Label"]
 light_mask = 16
 layout_mode = 2
+offset_top = 52.0
+offset_right = 112.0
+offset_bottom = 116.0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
+theme_override_fonts/font = ExtResource("5_smehm")
+theme_override_font_sizes/font_size = 64
+text = "$0"
+
+[node name="Total Scrap Label" type="Label" parent="HUD/CanvasGroup/VBoxContainer"]
+light_mask = 16
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
+theme_override_fonts/font = ExtResource("5_smehm")
+theme_override_font_sizes/font_size = 32
+text = "Total Scrap"
+
+[node name="Total Deposited Value" type="Label" parent="HUD/CanvasGroup/VBoxContainer/Total Scrap Label"]
+light_mask = 16
+layout_mode = 2
+offset_top = 49.403
+offset_right = 112.0
+offset_bottom = 113.403
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
 theme_override_fonts/font = ExtResource("5_smehm")
@@ -457,30 +469,6 @@ rotation = -1.57079
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_wqfne")
 frame_progress = 0.553706
-
-[node name="Label3" type="Label" parent="HUD/CanvasGroup"]
-light_mask = 16
-offset_left = 287.0
-offset_top = 64.0
-offset_right = 631.0
-offset_bottom = 96.0
-size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
-theme_override_fonts/font = ExtResource("5_smehm")
-theme_override_font_sizes/font_size = 32
-text = "Carried Scrap"
-
-[node name="Total Deposited Value" type="Label" parent="HUD/CanvasGroup"]
-light_mask = 16
-offset_left = 287.0
-offset_top = 97.1637
-offset_right = 399.0
-offset_bottom = 161.164
-size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
-theme_override_fonts/font = ExtResource("5_smehm")
-theme_override_font_sizes/font_size = 64
-text = "$0"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.001

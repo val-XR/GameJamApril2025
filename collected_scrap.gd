@@ -26,3 +26,29 @@ func print_list() -> void:
 	
 func collected_scrap_list():
 	return item_list
+
+
+func clear():
+	
+	# get list of scrap from gloabl autoload
+	var scrap_list = CollectedScrap.collected_scrap_list()
+	
+	# get resources dictionary from gloabl autoload
+	var resources_dictionary = ResourcesDictionary.dictionary()
+	
+	# total value
+	var total_value: int = 0
+	
+	for node in scrap_list:
+		
+		var parent_scene = node.get_parent()
+
+		if parent_scene.has_node("Line2D"):  # Or whatever the path is
+			var line_node = parent_scene.get_node("Line2D")
+			line_node.queue_free()
+			
+			var node2 = node
+			remove_item(node2)
+			node2.queue_free()
+		
+			print("Carried Resources Cleared")
