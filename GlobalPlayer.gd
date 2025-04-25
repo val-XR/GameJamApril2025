@@ -62,13 +62,13 @@ func TotalValueGet():
 
 # change total value
 func TotalValueAdd(amount):
-	total_value = clamp(total_value + amount, 0, 100)
+	total_value = total_value + amount
 	#print("Total Value Added: " + str(total_value))
 
 
 # set total value
 func TotalValueSet(amount):
-	total_value = clamp(amount, 0, 100)
+	total_value = amount
 	#print("Total Value Set: " + str(total_value))
 
 

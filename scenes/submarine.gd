@@ -13,6 +13,11 @@ func _on_button_pressed() -> void:
 	var total_value = GlobalPlayer.TotalValueGet()
 	var carrying_value = GlobalPlayer.CarryingValueGet()
 	
-	GlobalPlayer.TotalValueAdd(carrying_value)
+	GlobalPlayer.TotalValueSet(carrying_value + total_value)
 	
 	CollectedScrap.clear()
+	
+	# end game
+	if GlobalPlayer.TotalValueGet() > 10:
+		get_tree().change_scene_to_file("res://Menus/GameOverMenu/GameOver.tscn")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
