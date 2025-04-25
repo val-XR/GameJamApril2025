@@ -144,6 +144,23 @@ position = Vector2(1, 61)
 width = 1.0
 default_color = Color(0.494063, 0.300161, 0.0989949, 1)
 
+[node name="Iron Ore3" type="Node" parent="Resources Group"]
+
+[node name="IronOre2" parent="Resources Group/Iron Ore3" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("14_6de02")]
+z_as_relative = true
+position = Vector2(-1045, -1476)
+collision_layer = 3
+mass = 0.5
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Iron Ore3"]
+z_index = -2
+z_as_relative = false
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
 [node name="Iron Ore2" type="Node" parent="Resources Group"]
 
 [node name="IronOre2" parent="Resources Group/Iron Ore2" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("14_6de02")]
@@ -161,14 +178,107 @@ position = Vector2(1, 61)
 width = 1.0
 default_color = Color(0.494063, 0.300161, 0.0989949, 1)
 
+[node name="Iron Ore4" type="Node" parent="Resources Group"]
+
+[node name="IronOre2" parent="Resources Group/Iron Ore4" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("14_6de02")]
+z_as_relative = true
+position = Vector2(-3390, -1539)
+collision_layer = 3
+mass = 0.5
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Iron Ore4"]
+z_index = -2
+z_as_relative = false
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="Iron Ore5" type="Node" parent="Resources Group"]
+
+[node name="IronOre2" parent="Resources Group/Iron Ore5" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("14_6de02")]
+z_as_relative = true
+position = Vector2(-1655, -915)
+collision_layer = 3
+mass = 0.5
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Iron Ore5"]
+z_index = -2
+z_as_relative = false
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="Iron Ore6" type="Node" parent="Resources Group"]
+
+[node name="IronOre2" parent="Resources Group/Iron Ore6" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("14_6de02")]
+z_as_relative = true
+position = Vector2(-1768, -2164)
+collision_layer = 3
+mass = 0.5
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Iron Ore6"]
+z_index = -2
+z_as_relative = false
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
 [node name="Gold Ore" type="Node" parent="Resources Group"]
 
 [node name="GoldOre2" parent="Resources Group/Gold Ore" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("15_ikqpi")]
 position = Vector2(-132, 45)
 player = NodePath("../../../Player")
-line_node = NodePath("../Line2D Gold Ore")
+line_node = NodePath("../Line2D")
 
-[node name="Line2D Gold Ore" type="Line2D" parent="Resources Group/Gold Ore"]
+[node name="Line2D" type="Line2D" parent="Resources Group/Gold Ore"]
+z_index = -2
+z_as_relative = false
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="Gold Ore4" type="Node" parent="Resources Group"]
+
+[node name="GoldOre2" parent="Resources Group/Gold Ore4" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("15_ikqpi")]
+position = Vector2(-614, -691)
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Gold Ore4"]
+z_index = -2
+z_as_relative = false
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="Gold Ore3" type="Node" parent="Resources Group"]
+
+[node name="GoldOre2" parent="Resources Group/Gold Ore3" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("15_ikqpi")]
+position = Vector2(423, -275)
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Gold Ore3"]
+z_index = -2
+z_as_relative = false
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="Gold Ore2" type="Node" parent="Resources Group"]
+
+[node name="GoldOre2" parent="Resources Group/Gold Ore2" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("15_ikqpi")]
+position = Vector2(536, -339)
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Gold Ore2"]
 z_index = -2
 z_as_relative = false
 position = Vector2(1, 61)
@@ -180,10 +290,38 @@ default_color = Color(0.494063, 0.300161, 0.0989949, 1)
 [node name="UraniumOre2" parent="Resources Group/Uranium" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("16_5wboo")]
 position = Vector2(-1, 61)
 player = NodePath("../../../Player")
-line_node = NodePath("../Uranium Line")
+line_node = NodePath("../Line2D")
 offset = Vector2(-50, -82)
 
-[node name="Uranium Line" type="Line2D" parent="Resources Group/Uranium"]
+[node name="Line2D" type="Line2D" parent="Resources Group/Uranium"]
+z_index = -2
+position = Vector2(50, 83)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="Uranium3" type="Node" parent="Resources Group"]
+
+[node name="UraniumOre2" parent="Resources Group/Uranium3" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("16_5wboo")]
+position = Vector2(-3097, -1283)
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+offset = Vector2(-50, -82)
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Uranium3"]
+z_index = -2
+position = Vector2(50, 83)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="Uranium2" type="Node" parent="Resources Group"]
+
+[node name="UraniumOre2" parent="Resources Group/Uranium2" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("16_5wboo")]
+position = Vector2(-1146, -356)
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+offset = Vector2(-50, -82)
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Uranium2"]
 z_index = -2
 position = Vector2(50, 83)
 width = 1.0
@@ -195,9 +333,38 @@ default_color = Color(0.494063, 0.300161, 0.0989949, 1)
 z_index = -1
 position = Vector2(78, 44)
 player = NodePath("../../../Player")
-line_node = NodePath("../02 Tank Line")
+line_node = NodePath("../Line2D")
 
-[node name="02 Tank Line" type="Line2D" parent="Resources Group/02 Tank"]
+[node name="Line2D" type="Line2D" parent="Resources Group/02 Tank"]
+z_index = -2
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="02 Tank3" type="Node" parent="Resources Group"]
+
+[node name="O2Tank2" parent="Resources Group/02 Tank3" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("17_6de02")]
+z_index = -1
+position = Vector2(473, -674)
+rotation = 1.57079
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/02 Tank3"]
+z_index = -2
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="02 Tank2" type="Node" parent="Resources Group"]
+
+[node name="O2Tank2" parent="Resources Group/02 Tank2" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("17_6de02")]
+z_index = -1
+position = Vector2(1000, -3205)
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/02 Tank2"]
 z_index = -2
 position = Vector2(1, 61)
 width = 1.0
@@ -209,9 +376,65 @@ default_color = Color(0.494063, 0.300161, 0.0989949, 1)
 z_index = -1
 position = Vector2(279, 56)
 player = NodePath("../../../Player")
-line_node = NodePath("../Scrap Pipe Line")
+line_node = NodePath("../Line2D")
 
-[node name="Scrap Pipe Line" type="Line2D" parent="Resources Group/Scrap Pipe"]
+[node name="Line2D" type="Line2D" parent="Resources Group/Scrap Pipe"]
+z_index = -2
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="Scrap Pipe3" type="Node" parent="Resources Group"]
+
+[node name="ScrapPipe2" parent="Resources Group/Scrap Pipe3" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("18_cybgu")]
+z_index = -1
+position = Vector2(-1499, -1512)
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Scrap Pipe3"]
+z_index = -2
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="Scrap Pipe5" type="Node" parent="Resources Group"]
+
+[node name="ScrapPipe2" parent="Resources Group/Scrap Pipe5" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("18_cybgu")]
+z_index = -1
+position = Vector2(-2123, -967)
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Scrap Pipe5"]
+z_index = -2
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="Scrap Pipe4" type="Node" parent="Resources Group"]
+
+[node name="ScrapPipe2" parent="Resources Group/Scrap Pipe4" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("18_cybgu")]
+z_index = -1
+position = Vector2(-274, -1112)
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Scrap Pipe4"]
+z_index = -2
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="Scrap Pipe2" type="Node" parent="Resources Group"]
+
+[node name="ScrapPipe2" parent="Resources Group/Scrap Pipe2" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("18_cybgu")]
+z_index = -1
+position = Vector2(-856, -3351)
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Scrap Pipe2"]
 z_index = -2
 position = Vector2(1, 61)
 width = 1.0
@@ -223,9 +446,37 @@ default_color = Color(0.494063, 0.300161, 0.0989949, 1)
 z_index = -1
 position = Vector2(504, 153)
 player = NodePath("../../../Player")
-line_node = NodePath("../Scrap Propeler Line")
+line_node = NodePath("../Line2D")
 
-[node name="Scrap Propeler Line" type="Line2D" parent="Resources Group/Scrap Propeller"]
+[node name="Line2D" type="Line2D" parent="Resources Group/Scrap Propeller"]
+z_index = -2
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="Scrap Propeller3" type="Node" parent="Resources Group"]
+
+[node name="ScrapPropeller2" parent="Resources Group/Scrap Propeller3" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("19_wdxbp")]
+z_index = -1
+position = Vector2(-678, -3270)
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Scrap Propeller3"]
+z_index = -2
+position = Vector2(1, 61)
+width = 1.0
+default_color = Color(0.494063, 0.300161, 0.0989949, 1)
+
+[node name="Scrap Propeller2" type="Node" parent="Resources Group"]
+
+[node name="ScrapPropeller2" parent="Resources Group/Scrap Propeller2" node_paths=PackedStringArray("player", "line_node") instance=ExtResource("19_wdxbp")]
+z_index = -1
+position = Vector2(458, -3302)
+player = NodePath("../../../Player")
+line_node = NodePath("../Line2D")
+
+[node name="Line2D" type="Line2D" parent="Resources Group/Scrap Propeller2"]
 z_index = -2
 position = Vector2(1, 61)
 width = 1.0
