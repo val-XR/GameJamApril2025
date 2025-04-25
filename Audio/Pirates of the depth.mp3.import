@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://biuwqg87g47n3"
+path="res://.godot/imported/Pirates of the depth.mp3-c543e895b394d6d44b23cb6d7b95c842.mp3str"
+
+[deps]
+
+source_file="res://Audio/Pirates of the depth.mp3"
+dest_files=["res://.godot/imported/Pirates of the depth.mp3-c543e895b394d6d44b23cb6d7b95c842.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
