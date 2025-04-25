@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://myq2ctmpcduv"]
 
 [ext_resource type="AudioStream" uid="uid://c77hecnscowds" path="res://Audio/underwater-19568.mp3" id="1_vo0ct"]
-[ext_resource type="Script" uid="uid://b12bgbkprwdxl" path="res://Audio/audio_scene.gd" id="1_y31w0"]
+[ext_resource type="Script" path="res://Audio/audio_scene.gd" id="1_y31w0"]
 [ext_resource type="AudioStream" uid="uid://biuwqg87g47n3" path="res://Audio/Pirates of the depth.mp3" id="2_looji"]
 
 [node name="AudioScene" type="Node"]
@@ -9,6 +9,8 @@ script = ExtResource("1_y31w0")
 
 [node name="Underwater" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_vo0ct")
+volume_db = -12.465
+autoplay = true
 max_distance = 64365.0
 panning_strength = 0.0
 bus = &"Ambience"
@@ -20,4 +22,5 @@ stream = ExtResource("2_looji")
 volume_db = -20.018
 autoplay = true
 max_distance = 130176.0
+panning_strength = 0.0
 parameters/looping = true
