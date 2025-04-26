@@ -46,3 +46,7 @@ func _on_timer_timeout() -> void:
 		if Input.is_action_pressed("Test"):
 			if Oxygen < MaxOxygen:
 				Oxygen += 1
+
+
+func _on_mute_pressed() -> void:
+	pass # Replace with function body.

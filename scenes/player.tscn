@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://bncg5w35j5q15"]
+[gd_scene load_steps=57 format=3 uid="uid://bncg5w35j5q15"]
 
 [ext_resource type="Texture2D" uid="uid://ouxp3mdshv4p" path="res://textures/Player textures/diver_animation_test_03.png" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://bktijts6kjhh2" path="res://textures/Player textures/bub.png" id="1_g2els"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://d2p47n8ulcq1l" path="res://Menus/Fonts/PixelOperator8.ttf" id="5_smehm"]
 [ext_resource type="Texture2D" uid="uid://cunaajo386yw6" path="res://textures/Player textures/battery_pack_ui_ani.png" id="7_ur7pv"]
 [ext_resource type="Texture2D" uid="uid://c4ojjtynjglsu" path="res://textures/Player textures/health_bar_ui.png" id="8_y4r1p"]
+[ext_resource type="Theme" uid="uid://bj6c6uajd8ida" path="res://Menus/MainMenuTheme.tres" id="9_ur7pv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_smehm"]
 
@@ -376,12 +377,13 @@ script = ExtResource("3_qhqgy")
 wait_time = 0.1
 autostart = true
 
-[node name="HUD" type="CanvasLayer" parent="." node_paths=PackedStringArray("carrying_value_label", "total_deposited_value_label", "healthbar", "oxygen_bar")]
+[node name="HUD" type="CanvasLayer" parent="." node_paths=PackedStringArray("carrying_value_label", "total_deposited_value_label", "healthbar", "oxygen_bar", "mute_button")]
 script = ExtResource("4_fjrip")
 carrying_value_label = NodePath("CanvasGroup/VBoxContainer/Carrying Value Label/Carrying Value")
 total_deposited_value_label = NodePath("CanvasGroup/VBoxContainer/Total Scrap Label/Total Deposited Value")
 healthbar = NodePath("CanvasGroup/VBoxContainer/HBoxContainer/Health AnimatedSprite2D")
 oxygen_bar = NodePath("CanvasGroup/VBoxContainer/HBoxContainer/O2AnimatedSprite2D2")
+mute_button = NodePath("Mute")
 
 [node name="CanvasGroup" type="CanvasGroup" parent="HUD"]
 position = Vector2(23, 25)
@@ -393,27 +395,6 @@ scale = Vector2(0.797763, 0.797763)
 size_flags_horizontal = 0
 size_flags_vertical = 3
 theme_override_constants/separation = 125
-
-[node name="Carrying Value Label" type="Label" parent="HUD/CanvasGroup/VBoxContainer"]
-light_mask = 16
-layout_mode = 2
-size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
-theme_override_fonts/font = ExtResource("5_smehm")
-theme_override_font_sizes/font_size = 32
-text = "Carried Scrap"
-
-[node name="Carrying Value" type="Label" parent="HUD/CanvasGroup/VBoxContainer/Carrying Value Label"]
-light_mask = 16
-layout_mode = 2
-offset_top = 52.0
-offset_right = 112.0
-offset_bottom = 116.0
-size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
-theme_override_fonts/font = ExtResource("5_smehm")
-theme_override_font_sizes/font_size = 64
-text = "$0"
 
 [node name="Total Scrap Label" type="Label" parent="HUD/CanvasGroup/VBoxContainer"]
 light_mask = 16
@@ -430,6 +411,27 @@ layout_mode = 2
 offset_top = 49.403
 offset_right = 112.0
 offset_bottom = 113.403
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
+theme_override_fonts/font = ExtResource("5_smehm")
+theme_override_font_sizes/font_size = 64
+text = "$0"
+
+[node name="Carrying Value Label" type="Label" parent="HUD/CanvasGroup/VBoxContainer"]
+light_mask = 16
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
+theme_override_fonts/font = ExtResource("5_smehm")
+theme_override_font_sizes/font_size = 32
+text = "Carried Scrap"
+
+[node name="Carrying Value" type="Label" parent="HUD/CanvasGroup/VBoxContainer/Carrying Value Label"]
+light_mask = 16
+layout_mode = 2
+offset_top = 52.0
+offset_right = 112.0
+offset_bottom = 116.0
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
 theme_override_fonts/font = ExtResource("5_smehm")
@@ -470,6 +472,21 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_wqfne")
 frame_progress = 0.553706
 
+[node name="Mute" type="Button" parent="HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -102.0
+offset_top = 18.0
+offset_right = 38.0
+offset_bottom = 59.0
+grow_horizontal = 0
+scale = Vector2(0.52, 0.52)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("9_ur7pv")
+text = "Mute"
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.001
 autostart = true
@@ -486,4 +503,5 @@ shape = SubResource("CapsuleShape2D_smehm")
 [connection signal="NoAir" from="OxygenTimer" to="OxygenTimer" method="_on_no_air"]
 [connection signal="timeout" from="OxygenTimer" to="OxygenTimer" method="_on_timeout"]
 [connection signal="timeout" from="OldPos" to="OxygenTimer" method="_on_old_pos_timeout"]
+[connection signal="pressed" from="HUD/Mute" to="HUD" method="_on_mute_pressed"]
 [connection signal="timeout" from="Timer" to="OxygenTimer" method="_on_timer_timeout"]

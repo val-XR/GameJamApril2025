@@ -38,3 +38,16 @@ func _process(delta: float) -> void:
 	#print("total value display set: " + str(total_value))
 	
 	
+
+@onready var muted = false
+@export var mute_button: Button
+
+func _on_mute_pressed() -> void:
+	muted = !muted
+	
+	if muted:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
+		mute_button.text = "Unmute"
+	else:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
+		mute_button.text = "Mute"
