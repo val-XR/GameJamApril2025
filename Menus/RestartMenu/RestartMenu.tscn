@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://brdejttv1t6jh"]
+
+[ext_resource type="Script" uid="uid://brtawx1oopws1" path="res://Menus/RestartMenu/restart_menu.gd" id="1_ud8a0"]
+[ext_resource type="Theme" uid="uid://bj6c6uajd8ida" path="res://Menus/MainMenuTheme.tres" id="2_64sil"]
+[ext_resource type="Script" uid="uid://drba74uj0kmah" path="res://Menus/MainMenu/auto_load.gd" id="3_p0wbu"]
+
+[node name="RestartMenu" type="CanvasLayer"]
+script = ExtResource("1_ud8a0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.47451)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.618131, 0.618131)
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -674.615
+offset_top = -465.921
+offset_right = 675.385
+offset_bottom = -374.921
+grow_horizontal = 2
+size_flags_vertical = 3
+theme = ExtResource("2_64sil")
+theme_type_variation = &"HeaderLarge"
+text = "You Lost"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+z_index = 2
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -675.0
+offset_right = 675.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 55
+
+[node name="Back to main menu" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme = ExtResource("2_64sil")
+text = "Back to main menu
+"
+metadata/_edit_group_ = true
+
+[node name="AutoLoad" type="Node" parent="."]
+script = ExtResource("3_p0wbu")
+
+[connection signal="pressed" from="Control/VBoxContainer/Back to main menu" to="." method="_on_back_to_main_menu_pressed"]

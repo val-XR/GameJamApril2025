@@ -65,6 +65,7 @@ text = "Play
 "
 
 [node name="Levels" type="Button" parent="Control/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
@@ -72,6 +73,7 @@ theme = ExtResource("1_3e31c")
 text = "Levels"
 
 [node name="Settings" type="Button" parent="Control/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
@@ -108,5 +110,5 @@ script = ExtResource("3_jyye3")
 [connection signal="pressed" from="Control/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Blue Moon Creations" to="." method="_on_blue_moon_creations_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Quit" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

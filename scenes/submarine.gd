@@ -18,6 +18,6 @@ func _on_button_pressed() -> void:
 	CollectedScrap.clear()
 	
 	# end game
-	if GlobalPlayer.TotalValueGet() > 10:
+	if GlobalPlayer.TotalValueGet() >= 1000:
 		get_tree().change_scene_to_file("res://Menus/GameOverMenu/GameOver.tscn")
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

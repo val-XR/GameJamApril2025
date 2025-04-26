@@ -17,6 +17,9 @@ func PlayerHealthGet():
 # change player health
 func PlayerHealthAdd(amount):
 	player_health += amount
+	if player_health <= 0:
+		get_tree().change_scene_to_file("res://Menus/RestartMenu/RestartMenu.tscn")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	#print("Health Value Add: " + str(player_health))
 
 
