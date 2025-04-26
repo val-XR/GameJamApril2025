@@ -55,15 +55,23 @@ func _process(delta: float) -> void:
 		# sets roattion of player to face the cursor
 		#rotation = direction.angle()
 		
+
+		if direction.angle() > 1.5:
+			$AnimatedSprite2D.flip_h = true
+		else:
+			$AnimatedSprite2D.flip_h = false
+		
 		var target_angle = (get_global_mouse_position() - global_position).angle()
 		rotation = lerp_angle(rotation, target_angle, delta * 9)  # Smooth turn
 
 		move_and_slide()
 		
 		GlobalPlayer.PlayerOxygenAdd(-3 * oxygen_decrease_rate)
+		$AnimatedSprite2D.set_speed_scale(1.5)
 	
 	else:
 		GlobalPlayer.PlayerOxygenAdd(-1 * oxygen_decrease_rate)
+		$AnimatedSprite2D.set_speed_scale(1.0)
 		
 	if GlobalPlayer.PlayerOxygenGet() <= 0:
 		#GlobalPlayer.PlayerHealthSet(0)
