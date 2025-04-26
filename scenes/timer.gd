@@ -32,21 +32,3 @@ func _on_old_pos_timeout() -> void:
 		# if Oldlocation is not equal to new location
 		IsMoving = true
 		OldLocation = player.global_position
-		
-func _process(delta: float) -> void:
-	if NextChange >= Oxygen:
-		%O2AnimatedSprite2D2.frame += 1
-		RefillAir = NextChange
-		NextChange = Oxygen - Change
-	elif RefillAir <= Oxygen:
-		%O2AnimatedSprite2D2.frame -= 1
-		# NOT WORKING ATM
-
-func _on_timer_timeout() -> void:
-		if Input.is_action_pressed("Test"):
-			if Oxygen < MaxOxygen:
-				Oxygen += 1
-
-
-func _on_mute_pressed() -> void:
-	pass # Replace with function body.

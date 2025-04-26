@@ -6,18 +6,8 @@ var oxygen_decrease_rate = 0.005
 
 
 func _ready() -> void:
-	$OxygenTimer.NoAir.connect(No_Air)
 	GlobalPlayer.PlayerHealthSet(100)
 	GlobalPlayer.PlayerOxygenSet(100)
-	
-
-func No_Air():
-	if GlobalPlayer.PlayerHealthGet() <= 0:
-		print("Dead")
-		#get_tree().change_scene_to_file("res://Menus/MainMenu/MainMenu.tscn")
-	else:
-		GlobalPlayer.PlayerHealthAdd(-1)
-		print("Health:", health)
 
 
 
